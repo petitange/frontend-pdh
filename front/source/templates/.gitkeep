@@ -1,0 +1,10 @@
+# Ignore configuration files that may contain sensitive information.
+
+# Node JS
+node_modules
+
+# Build
+front/build
+
+# Log files
+*.log
