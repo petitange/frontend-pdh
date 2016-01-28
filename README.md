@@ -1,2 +1,4 @@
-# web-project-template
-Template for begin any web project
+# Web project template
+
+Template for begin any web project.
+
