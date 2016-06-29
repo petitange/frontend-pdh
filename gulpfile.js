@@ -131,9 +131,9 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(src.build + 'css'));
 
 
-//  return sass(src.scss, { 
-//    style: 'expanded', 
-//    sourcemap: false 
+//  return sass(src.scss, {
+//    style: 'expanded',
+//    sourcemap: false
 //    })
 //    .on('error', function(err) {
 //        notify.onError({
@@ -175,7 +175,7 @@ gulp.task('layout', function () {
     .pipe(gulp.dest(src.build));
 });
 
-gulp.task('watch', function(){  
+gulp.task('watch', function(){
 //  gulp.watch(src.js,                 ['scripts']);
   gulp.watch(src.tmpl, ['layout']);
   gulp.watch(src.data, ['layout']);
@@ -203,4 +203,3 @@ gulp.task('default', ['scripts', 'layout', 'image', 'watch', 'serve', 'sizerepor
 gulp.task('local', ['scripts', 'layout', 'image', 'watch', 'serve', 'sizereport']);
 gulp.task('staging', ['scripts', 'layout', 'image', 'sizereport', 'build']);
 gulp.task('live', ['scripts', 'layout', 'image']);
-
