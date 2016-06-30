@@ -1,0 +1,13 @@
+{
+  "path": {
+    "css":     "./front/source/assets/stylesheets/styles.scss",
+    "data":    "./front/data/example.json",
+    "scss":    "./front/source/assets/stylesheets/**/*.scss",
+    "img":     "./front/source/assets/images/**/*",
+    "js":      "./front/source/assets/javascripts/**/*.js",
+    "html":    "./front/source/templates/*.html",
+    "tmpl":    "./front/source/templates/**/*.html",
+    "build":   "./front/build/"
+  },
+  "alt-require": true
+}

@@ -12,6 +12,10 @@ comandos:
 > sudo npm install -g gulp
 > sudo npm install -g jshint gulp-jshint htmlhint gulp-htmlhint gulp-jshint-html-reporter
 > sudo npm install -g bower
+> sudo npm install -g bower
+
+// Agregar dependecias
+> bower install
 
 // Para corregir nodejs si da algún error de línea de comando.
 > ln -s /usr/bin/nodejs /usr/bin/node
