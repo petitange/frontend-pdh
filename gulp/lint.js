@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 gulp.task('lint-scripts', function() {
     return gulp.src([config.path.js])
-    .pipe(plugins.jscsCustom({configPath: '.jscs.json'}))
+    .pipe(plugins.jscsCustom({configPath: './jscs.json'}))
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'))
     ;
