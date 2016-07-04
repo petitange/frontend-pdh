@@ -1,6 +1,5 @@
 {
   "plugins" : [
-    "bower_components/angular/angular.js",
-    "./front/source/assets/javascripts/**/*.js"
+    "bower_components/angular/angular.js"
   ]
 }
