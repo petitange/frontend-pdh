@@ -1,8 +1,10 @@
 {
   "path": {
     "css":     "./front/source/assets/stylesheets/styles.scss",
+    "fonts":     "./front/source/assets/fonts/**",
     "data":    "./front/data/example.json",
     "scss":    "./front/source/assets/stylesheets/**/*.scss",
+    "styles":    "./front/source/assets/stylesheets/**/*.css",
     "img":     "./front/source/assets/images/**/*",
     "js":      "./front/source/assets/javascripts/**/*.js",
     "html":    "./front/source/templates/*.html",

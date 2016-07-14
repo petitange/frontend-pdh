@@ -7,24 +7,20 @@ var gulp = require('gulp'),
         replaceString: /^gulp(-|\.)/,
         lazy: false
     }),
-    config = require('./config/config.json');
+    config = require('./config/config.json'),
+    css = require('./config/styles.json');
 
-gulp.task('clean-styles', function(callback) {
-    del(config.path.build + 'css', callback);
+css.path.push(config.path.styles);
+
+gulp.task('fonts', function() {
+    return gulp.src(config.path.fonts)
+    .pipe(gulp.dest(config.path.build + 'css/fonts'))
 });
 
-gulp.task('sass', function() {
-  return gulp.src([config.path.css])
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass({outputStyle: 'expanded'})).on('error', sass.logError)
-    .pipe(plugins.autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(plugins.rename('styles.css'))
-    .pipe(gulp.dest(src.build + 'css'))
-    .pipe(plugins.cssnano())
-    .pipe(plugins.sourcemaps.write('.'))
+gulp.task('stylesheets',['fonts'], function() {
+    return gulp.src(css.path)
+    .pipe(plugins.concat('styles.css'))
+    .pipe(gulp.dest(config.path.build + 'css'))
     .pipe(plugins.rename({ extname: '.min.css' }))
-    .pipe(gulp.dest(src.build + 'css'));
+    .pipe(gulp.dest(config.path.build + 'css'));
 });
