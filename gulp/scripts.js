@@ -12,6 +12,7 @@ var gulp = require('gulp'),
 
 scripts.plugins.push(config.path.js);
 
+console.log('scripts', scripts);
 gulp.task('clean-scripts', function(callback) {
     del(config.path.build + 'js', callback);
 });

@@ -27,12 +27,6 @@ body.background-body {
 #header .content-header {
   height: 100%;
   width: 100%;
-  background-color: #252525;
-}
-#header.page-header {
-  font-family: "Gotham-Light","Trebuchet MS",Arial,sans-serif;
-  margin: 0px;
-  padding: 0px;
 }
 
 /* toolheader */
@@ -104,7 +98,7 @@ body.background-body {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
+  -webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -122,11 +116,56 @@ body.background-body {
   transform: rotateX(180deg);
 }
 /*end flip car*/
+
+.remove-padding-right {
+  padding-right: 0px;
+}
+
 @media screen and (min-width: 769px) {
-  .border-top-search-car {
-    border-top: 1px solid #484848;
-    padding-right: 0px;
+  .toolheader {
+    margin-top: 30px;
   }
+
+  .mcp-pushnew-menu .content-float {
+    position: absolute;
+    top: -95px;
+    text-align: right;
+  }
+
+  #content-secundary-menu {
+    right: 105px;
+    width: 412px;
+  }
+
+  #content-secundary-menu ul{
+    padding: 0;
+    border-bottom: 1px solid #484848;
+  }
+
+  #content-secundary-menu .secundary-menu li{
+    display: inline-table;
+    height: 24px;
+  }
+
+  #content-secundary-menu .secundary-menu li a{
+    font-size: 11px;
+    color: #ffffff;
+    font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-right: 25px;
+  }
+
+  #content-account-links {
+    right: 0px;
+    width: 85px;
+  }
+
+  #content-account-links a{
+    font-size: 11px;
+    font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    color: #f0f0f0;
+  }
+
   .car-price-detail {
     width: 125px;
     height: 70px;
@@ -142,8 +181,9 @@ body.background-body {
     float: right;
     color: #ffc425;
     font-size: 18px;
-    letter-spacing: -0.5px;
-    padding: 5px 20px;
+    letter-spacing: -0.3px;
+    padding: 10px 15px;
+    font-family: 'Gotham', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   .car-price-detail .back{
@@ -154,7 +194,8 @@ body.background-body {
     font-size: 18px;
     letter-spacing: -0.5px;
     background-color: #ffc425;
-    padding: 20px 20px;
+    padding: 26px 16px;
+    font-family: 'Gotham', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   .car-price-detail .detail {
@@ -162,6 +203,8 @@ body.background-body {
   }
   .car-price-detail .price {
     font-size: 18px;
+    float: left;
+    margin-top: -5px;
   }
 
   #header-minicart-container.active {
@@ -190,7 +233,7 @@ body.background-body {
 
   #toolbar-search.animate-search {
     position: absolute;
-    right: 210px;
+    right: 220px;
     margin-top: 10px;
     height: 40px;
     background-color: #252525;
@@ -232,6 +275,7 @@ body.background-body {
     height: 35px;
     color: #fff;
     font-size: 22px;
+    font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     outline: none;
     background: none;
     border: none;
@@ -251,17 +295,14 @@ body.background-body {
   /* End search*/
 
   /*Extra Css*/
-  #content-slider {
-    display: table;
-    margin: 0 auto;
-    width: 1280px;
-  }
-
   #content-slider img {
     position: absolute;
     z-index: -1;
-    margin: 0;
-    top: -16px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
   .row {

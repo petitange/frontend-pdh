@@ -1,21 +1,21 @@
-var mobileBreakPoint, menu;
-mobileBreakPoint = 768;
-// jshint ignore:line
-menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
-  type: 'overlap'
-});
+var mobileBreakPoint = 768;
 //Init scripts
 $(document).ready(function () {
-  var widthScreen = getWidthScreen();
+  var widthScreen = getWidthScreen ();
   getSizeMenu(widthScreen);
   getAnimations();
 });
 
 $(window).load(function () {
-  $('.loader').fadeOut('slow');
+	$('.loader').fadeOut('slow');
 });
 
-$('.close-menu').click(function () {
+//menu mobile
+var menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
+  type: 'overlap'
+});
+
+$('.content-close-menu').click(function () {
   menu._resetMenu();
   $('.menu-lines .line1').animate({
     left: '0px'
@@ -31,14 +31,18 @@ function animateLines() {
 }
 
 $(window).resize(function () {
-  var widthScreen = getWidthScreen();
+  var widthScreen = getWidthScreen ();
   $('.mcp-wrapper #menu-group-1').css('width', widthScreen - 30);
   getSizeMenu(widthScreen);
-  if (widthScreen < mobileBreakPoint) {
+  if (widthScreen <= mobileBreakPoint) {
     $('#toolbar-search.animate-search').css('width', widthScreen - 50);
   } else {
     $('#toolbar-search.animate-search').css('width', 300);
   }
+});
+
+$('content-sub-menu').resize(function () {
+  console.log($('content-sub-menu').height());
 });
 
 function getSizeMenu(widthScreen) {
@@ -72,12 +76,13 @@ function getWidthScreen() {
 
 //search
 $('.search-button').click(function () {
-  var widthScreen = getWidthScreen();
+  var widthScreen = getWidthScreen ();
   animateSearch(widthScreen);
 });
 
 function animateSearch(widthScreen) {
   var minSizeSearch = 300;
+  $('.close-search.icon-close').css('display', 'block');
   $('#search-mini-form #search').css('display', 'block');
   if (widthScreen > mobileBreakPoint) {
     $('#toolbar-search').addClass('animate-search');
@@ -108,6 +113,7 @@ $('#search-mini-form #search .close-search').click(function () {
     }, 500, function () {
       $('.search-button').css('color', '#fff');
       $('#toolbar-search.animate-search').css('width', '25px');
+      $('.close-search.icon-close').css('display', 'none');
       $('#toolbar-search').removeClass('animate-search');
     });
   } else {

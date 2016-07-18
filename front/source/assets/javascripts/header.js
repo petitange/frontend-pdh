@@ -1,5 +1,5 @@
 var app = angular.module('header', []);
-app.controller ('headerCtrl', function ($scope) {
+app.controller('headerCtrl', function ($scope) {
   $scope.menu = [
     {
       label: 'eBoutiques',
