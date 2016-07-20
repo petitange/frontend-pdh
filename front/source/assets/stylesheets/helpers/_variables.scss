@@ -1,0 +1,50 @@
+//fonts
+$font-gotham-book: 'Gotham-Book';
+$font-gotham-book-path: 'fonts/Gotham-Book';
+$font-gotham-medium: 'Gotham';
+$font-gotham-medium-path: 'fonts/Gotham';
+$font-gotham-bold: 'Gotham-Bold';
+$font-gotham-bold-path: 'fonts/Gotham-Bold';
+$font-icomoon: 'icomoon';
+$font-icomoon-path: 'fonts/icomoon';
+$font-secondary: Arial, Helvetica, sans-serif;
+
+// Map icon names to font unicode characters
+$icons: (
+    sale: "\6b",
+    bag: "\69",
+    close: "\6a",
+    left: "\67",
+    search: "\68",
+    user: "\66",
+    card: "\63",
+    casa: "\65",
+    departamento: "\61",
+    gift: "\62",
+    viajes: "\64"
+);
+
+//colors
+$color-black: #252525;
+$color-brownish-grey: #656565;
+$color-dark-grey: #484848;
+$color-golden-yellow: #ffc425;
+$color-grey: #565656;
+$color-ligth-grey: #bfbfbf;
+$color-red: #ff001f;
+$color-white: #ffffff;
+
+//images
+$img-loader: '../img/page-loader.gif';
+
+//backgrounds
+$background-color-black: $color-black;
+$background-color-grey: $color-grey;
+$background-color-golden-yellow: $color-golden-yellow;
+
+//border
+$border-width-1px: 1px;
+$border-style-solid: solid;
+
+$margin-top-menu: -28px;
+$menu-elements: 12;

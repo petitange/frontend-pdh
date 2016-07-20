@@ -1,54 +1,7 @@
 @media only screen and (min-width: 320px)  and (max-width: 400px) {
   .logo {
     float: right;
-    margin: 14px -15px 0px 0px !important;
-  }
-
-  #content-slider img {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 1330px) {
-  #content-slider {
-    width: 100%;
-  }
-
-  #content-slider img {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  .toolheader {
-    width: 100%;
-    padding-left: 15px;
-  }
-
-  .row {
-    margin-right: 0px;
-  }
-
-  .mcp-wrapper {
-    width: 100%;
-  }
-
-  .mcp-wrapper #menu-group-1 {
-    float: left;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .banner-right {
-    display: none
-  }
-
-  .remove-padding-right {
-      padding-right: 15px;
+    margin: 10px -15px 0px 0px !important;
   }
 }
 
@@ -63,6 +16,7 @@
 
   .toolheader {
     margin-top: 0px;
+    width: 100%;
   }
 
   .car-price-datail, .flip-container, .vertical, .front, .back{
@@ -131,7 +85,7 @@
   }
 
   #toolbar-search.animate-search #search-mini-form #search{
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   #search-mini-form *{
@@ -152,7 +106,7 @@
     height: 18px;
     font-size: 18px;
     font-weight: normal;
-    padding: 11px 40px 0px 0px;
+    padding: 5px 40px 0px 0px;
     cursor: pointer;
     color: #bfbfbf;
   }
@@ -177,7 +131,7 @@
     font-size: 22px;
     color: #b9b9b9;
     border: none;
-    margin-top: 20px;
+    margin-top: 15px;
     cursor: pointer;
   }
   /* End search*/
@@ -193,7 +147,7 @@
   }
 
   #header-minicart-container span {
-    padding-top: 20px;
+    padding-top: 15px;
     text-align: center;
     display: block;
     margin: auto 0;
@@ -203,7 +157,7 @@
   #header-minicart-container i {
     font-size: 26px;
     position: absolute;
-    margin: 15px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
   }
   /* end car */
 }

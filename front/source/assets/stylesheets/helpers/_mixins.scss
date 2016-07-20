@@ -1,0 +1,111 @@
+@mixin center-absolute-item() {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@mixin generate-loader($image:"") {
+  background: url(#{$image}) 50% 50% no-repeat;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+@mixin font-face($font-name:"", $font-path:"") {
+  @font-face {
+    font-family: "#{$font-name}";
+    src: url("#{$font-path}.eot?") format("eot"),
+         url("#{$font-path}.woff2") format("woff2"),
+         url("#{$font-path}.woff") format("woff"),
+         url("#{$font-path}.ttf") format("truetype"),
+         url("#{$font-path}.svg##{$font-name}") format("svg");
+  }
+}
+
+@mixin font-icon($font-icon:"") {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$font-icon}';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-list($icons) {
+  @each $icon-label, $icon-content in $icons {
+    .icon-#{$icon-label}:before {
+      @each $content in $icon-content {
+        content: '#{$content}';
+      }
+    }
+  }
+}
+
+@mixin size-max-content() {
+  display: table;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+@mixin hide-flip() {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin box-border($border-width, $border-style, $border-color) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+}
+
+@mixin box-car() {
+  width: 125px;
+  height: 70px;
+  float: right;
+}
+
+@mixin generate-margin-top-menu($menu-elements, $margin-top-menu) {
+  $sum: 18px;
+  @for $i from 1 through $menu-elements {
+    $sum: $sum + $margin-top-menu;
+    .level1-#{$i} {
+      .grid-container5 {
+        margin-top: $sum;
+      }
+    }
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 1330px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}

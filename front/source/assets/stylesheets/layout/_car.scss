@@ -1,0 +1,73 @@
+/* flip car */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateX(-180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateX(180deg);
+}
+/*end flip car*/
+.car-price-detail {
+  @include bp-medium {
+    @include box-car();
+    color: $color-golden-yellow;
+    border-right: none;
+    border: 1px solid $color-golden-yellow;
+    div {
+      &:first-child{
+        @include box-car();
+        color: $color-golden-yellow;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        padding: 10px 15px;
+        font-family: $font-gotham-medium, $font-secondary;
+      }
+    }
+    .back {
+      @include box-car();
+      color: $color-black;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      background-color: $background-color-golden-yellow;
+      padding: 26px 16px;
+      font-family: $font-gotham-medium, $font-secondary;
+    }
+    .detail {
+       font-size: 10px;
+    }
+    .price {
+      font-size: 18px;
+      float: left;
+      margin-top: -5px;
+    }
+  }
+}

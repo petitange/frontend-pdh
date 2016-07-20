@@ -1,4 +1,7 @@
-var mobileBreakPoint = 768;
+var mobileBreakPoint = 768,
+    menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
+      type: 'overlap'
+    });
 //Init scripts
 $(document).ready(function () {
   var widthScreen = getWidthScreen ();
@@ -7,12 +10,7 @@ $(document).ready(function () {
 });
 
 $(window).load(function () {
-	$('.loader').fadeOut('slow');
-});
-
-//menu mobile
-var menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
-  type: 'overlap'
+  $('.loader').fadeOut('slow');
 });
 
 $('.content-close-menu').click(function () {

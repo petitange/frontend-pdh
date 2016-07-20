@@ -1,0 +1,44 @@
+.mcp-pushnew-menu {
+  @include bp-medium {
+    .content-float {
+      position: absolute;
+      top: -95px;
+      text-align: right;
+    }
+  }
+}
+
+#content-secundary-menu {
+  @include bp-medium {
+    right: 105px;
+    width: 400px;
+    ul {
+      padding: 0;
+      border-bottom: 1px solid $color-dark-grey;
+    }
+    .secundary-menu {
+      li {
+        display: inline-table;
+        height: 24px;
+        a {
+          font-size: 11px;
+          color: $color-white;
+          font-family: $font-gotham-book, $font-secondary;
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+#content-account-links {
+  @include bp-medium {
+    right: 0px;
+    width: 85px;
+    a {
+      font-size: 11px;
+      font-family: $font-gotham-book, $font-secondary;
+      color: $color-white;
+    }
+  }
+}

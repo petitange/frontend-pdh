@@ -1,7 +1,9 @@
 {
   "plugins" : [
     "bower_components/jquery/dist/jquery.min.js",
-    "bower_components/angular/angular.js",
-    "./front/source/assets/plugins/**/*.js"
+    "bower_components/angular/angular.min.js",
+    "./front/source/assets/plugins/**/*.js",
+    "./front/source/assets/javascripts/app.js",
+    "./front/source/assets/javascripts/controllers/**/*.js"
   ]
 }
