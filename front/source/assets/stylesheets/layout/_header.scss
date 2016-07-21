@@ -25,45 +25,12 @@
   }
 }
 
-#header-minicart-container {
-  float: right;
-  color: $color-ligth-grey;
-  @include bp-medium {
-    @include box-border($border-width-1px, $border-style-solid, $color-dark-grey);
-    width: 70px;
-    height: 70px;
-    &.active {
-      @include box-border($border-width-1px, $border-style-solid, $color-golden-yellow);
-      border: 1px solid #ffc425;
-      color: #ffc425;
-    }
-    i {
-      font-size: 37px;
-      position: absolute;
-      margin: 13px;
-    }
-    span {
-      padding-top: 26px;
-      text-align: center;
-      display: block;
-      margin: auto 0;
-      width: 67px;
-    }
-  }
-}
-
 #content-slider {
   @include bp-large {
     width: 100%;
   }
   img {
      @include center-absolute-item();
-  }
-}
-
-.row {
-  @include bp-large {
-    margin-right: 0px;
   }
 }
 

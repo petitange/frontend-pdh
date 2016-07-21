@@ -92,6 +92,24 @@
   }
 }
 
+@mixin box-reset() {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+}
+
+@mixin animate-menu-translation($init, $end) {
+  -o-transform-origin: $init $init;
+	-ms-transform-origin: $init $init;
+	-moz-transform-origin: $init $init;
+	-webkit-transform-origin: $init $init;
+	-o-transition: -o-transform $end, opacity $end;
+	-ms-transition: -ms-transform $end, opacity $end;
+	-moz-transition: -moz-transform $end, opacity $end;
+	-webkit-transition: -webkit-transform $end, opacity $end;
+}
+
 @mixin bp-large {
   @media only screen and (max-width: 1330px) {
     @content;
