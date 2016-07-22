@@ -5,61 +5,82 @@
     @include box-border($border-width-1px, $border-style-solid, $color-dark-grey);
     width: 70px;
     height: 70px;
-    &.active {
+  }
+  @include bp-small {
+    width: 28px;
+    height: 26px;
+    padding: 1px 0px;
+  }
+  &.active {
+    @include bp-medium {
       @include box-border($border-width-1px, $border-style-solid, $color-golden-yellow);
-      border: 1px solid #ffc425;
-      color: #ffc425;
+      border: 1px solid $color-golden-yellow;
+      color: $color-golden-yellow;
     }
-    i {
+    @include bp-small {
+      color: $color-golden-yellow;
+    }
+  }
+  i {
+    @include bp-medium {
       font-size: 37px;
       position: absolute;
       margin: 13px;
     }
-    span {
+    @include bp-small {
+      font-size: 26px;
+      position: absolute;
+      margin: 10px 0px 0px 0px;
+    }
+  }
+  span {
+    @include bp-medium {
       padding-top: 26px;
       text-align: center;
       display: block;
       margin: auto 0;
       width: 67px;
     }
+    @include bp-small {
+      padding-top: 15px;
+      text-align: center;
+      display: block;
+      margin: auto 0;
+      width: 27px;
+    }
   }
 }
 /* flip car */
-/* entire container, keeps perspective */
 .flip-container {
+  @include bp-small {
+    display: none;
+  }
   perspective: 1000px;
-}
-/* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateX(-180deg);
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateX(180deg);
+  &:hover {
+    .flipper {
+      transform: rotateX(-180deg);
+    }
+  }
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    @include back-face-visibility(hidden);
+    @include bp-small {
+      display: none;
+    }
+  }
+  .back {
+    transform: rotateX(180deg);
+    @include back-face-visibility(hidden);
+    @include bp-small {
+      display: none;
+    }
+  }
 }
 /*end flip car*/
 .car-price-detail {
@@ -95,5 +116,8 @@
       float: left;
       margin-top: -5px;
     }
+  }
+  @include bp-small {
+    display: none;
   }
 }

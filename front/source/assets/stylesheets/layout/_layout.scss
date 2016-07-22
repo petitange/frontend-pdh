@@ -5,10 +5,16 @@
 @include icon-list($icons);
 
 body {
-  .background-body {
+  &.background-body {
     padding: 0;
     margin: 0;
     background-color: $background-color-grey;
+  }
+}
+
+.row {
+  @include bp-large {
+    margin-right: 0px;
   }
 }
 

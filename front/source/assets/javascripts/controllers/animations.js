@@ -109,7 +109,7 @@ $('#search-mini-form #search .close-search').click(function () {
     $('#search-mini-form #search').animate({
       width: '0%'
     }, 500, function () {
-      $('.search-button').css('color', '#fff');
+      $('.search-button').css('color', '#bfbfbf');
       $('#toolbar-search.animate-search').css('width', '25px');
       $('.close-search.icon-close').css('display', 'none');
       $('#toolbar-search').removeClass('animate-search');

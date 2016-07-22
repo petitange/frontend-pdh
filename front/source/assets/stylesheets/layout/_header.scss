@@ -3,6 +3,9 @@
   .content-header {
     height: 100%;
     width: 100%;
+    @include bp-small {
+      height: 60px;
+    }
   }
 }
 
@@ -16,12 +19,16 @@
   @include bp-medium {
     margin-top: 30px;
   }
+  @include bp-small {
+    margin-top: 0px;
+    width: 100%;
+  }
 }
 
 .remove-padding-right {
   padding-right: 0px;
   @include bp-large {
-    padding: 5px 15px 0px 0px;
+    padding-right: 15px;
   }
 }
 
@@ -34,28 +41,6 @@
   }
 }
 
-.mcp-wrapper {
-  @include bp-large {
-    width: 100%;
-  }
-  @include bp-medium {
-    @include size-max-content();
-    padding: 0px 0px 10px 0px;
-  }
-
-  #menu-group-1 {
-    float: left;
-    margin: 0 auto;
-    @include bp-large {
-      width: 100%;
-    }
-    @include bp-medium {
-      max-width: 1280px;
-      padding-right: 0px;
-    }
-  }
-}
-
 .banner-right {
   @include bp-large {
     display: none
@@ -63,9 +48,20 @@
 }
 
 .logo {
+  @include bp-iphone-portrait {
+    float: right;
+    margin: 10px -15px 0px 0px !important;
+  }
+  @include bp-small {
+    float: right;
+    margin: 14px;
+  }
   img {
     @include bp-medium {
       max-width: 193px;
+    }
+    @include bp-small {
+      max-width: 112px;
     }
   }
 }
