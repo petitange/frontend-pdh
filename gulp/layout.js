@@ -22,13 +22,5 @@ gulp.task('clean-layouts', function(callback) {
 
 gulp.task('layouts', function () {
   return gulp.src([config.path.html])
-    .pipe(plugins.data(function(file) {
-        return JSON.parse(fs.readFileSync(config.path.data, 'utf8'));
-      }))
-    .on('error', onError)
-    .pipe(plugins.nunjucks.compile())
-    .on('error', onError)
-    .pipe(plugins.htmlhint('.htmlhintrc'))
-    .pipe(plugins.htmlhint.failReporter())
     .pipe(gulp.dest(config.path.build));
 });

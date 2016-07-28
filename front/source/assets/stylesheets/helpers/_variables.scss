@@ -1,8 +1,8 @@
 //fonts
 $font-gotham-book: 'Gotham-Book';
 $font-gotham-book-path: 'fonts/Gotham-Book';
-$font-gotham-medium: 'Gotham';
-$font-gotham-medium-path: 'fonts/Gotham';
+$font-gotham-medium: 'Gotham-Medium';
+$font-gotham-medium-path: 'fonts/Gotham-Medium';
 $font-gotham-bold: 'Gotham-Bold';
 $font-gotham-bold-path: 'fonts/Gotham-Bold';
 $font-icomoon: 'icomoon';
@@ -11,17 +11,18 @@ $font-secondary: Arial, Helvetica, sans-serif;
 
 // Map icon names to font unicode characters
 $icons: (
-    sale: "\6b",
-    bag: "\69",
-    close: "\6a",
-    left: "\67",
-    search: "\68",
-    user: "\66",
-    card: "\63",
-    casa: "\65",
-    departamento: "\61",
-    gift: "\62",
-    viajes: "\64"
+    seguros: '\6c',
+    sale: '\6b',
+    bag: '\69',
+    close: '\6a',
+    left: '\67',
+    search: '\68',
+    user: '\66',
+    card: '\63',
+    casa: '\65',
+    departamento: '\61',
+    gift: '\62',
+    viajes: '\64'
 );
 
 //colors

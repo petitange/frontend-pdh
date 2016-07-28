@@ -10,16 +10,20 @@ body {
     margin: 0;
     background-color: $background-color-grey;
   }
-}
-
-.row {
-  @include bp-large {
+  .row {
     margin-right: 0px;
   }
-}
-
-.loader {
-	@include generate-loader($img-loader);
+  .loader {
+  	@include generate-loader($img-loader);
+  }
+  #content-slider {
+    height: 1000px;
+    position: relative;
+    z-index: -2;
+    img {
+       @include center-absolute-item();
+    }
+  }
 }
 
 [class^="icon-"] {

@@ -14,7 +14,6 @@ gulp.task('fonts', function() {
     return gulp.src(config.path.fonts)
     .pipe(gulp.dest(config.path.build + 'css/fonts'))
 });
-
 gulp.task('sass', function() {
   return gulp.src([config.path.scss])
     .pipe(plugins.sourcemaps.init())
@@ -30,11 +29,9 @@ gulp.task('sass', function() {
     .pipe(plugins.rename({ extname: '.min.css' }))
     .pipe(gulp.dest(config.path.build + 'css'));
 });
-
-gulp.task('stylesheets',['fonts', 'sass'], function() {
-    return gulp.src(css.path)
-    .pipe(plugins.concat('styles.css'))
-    .pipe(gulp.dest(config.path.build + 'css'))
-    .pipe(plugins.rename({ extname: '.min.css' }))
+console.log('css.path', css.path);
+gulp.task('stylesheets', ['sass', 'fonts'], function() {
+  return gulp.src(css.path)
+    .pipe(plugins.rename('styles.css'))
     .pipe(gulp.dest(config.path.build + 'css'));
 });

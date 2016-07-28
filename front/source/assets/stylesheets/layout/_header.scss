@@ -32,15 +32,6 @@
   }
 }
 
-#content-slider {
-  @include bp-large {
-    width: 100%;
-  }
-  img {
-     @include center-absolute-item();
-  }
-}
-
 .banner-right {
   @include bp-large {
     display: none

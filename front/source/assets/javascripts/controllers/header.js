@@ -7,7 +7,6 @@
 
   function headerCtrl() {
     var vm = this;
-    vm.hola = 'hola';
     vm.menu = [
       {
         label: 'eBoutiques',

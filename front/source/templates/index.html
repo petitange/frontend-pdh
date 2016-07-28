@@ -6,7 +6,7 @@
 <meta name="keywords" content="Regalos, Tarjeta Palacio, Promociones Palacio, Martes tarjeta Palacio, Michael Kors, Kors, Michael, Casa Palacio, horarios tiendas palacio, Liverpool, Sears, Sanborns, Solo Sanborns, shopping store, tienda online, Liverpool, Liverpool.com, tecnología, línea blanca, computo, smarthphones, juguetes, moda, herramientas para hogar, jardín, hogar, muebles, decoración, muebles, deportes, cuidado personal, sears me entiende, solo sanborns, Primavera 3014, Feria del mueble y del hogar, Palacio de Hierro Facturacion, palacio de hierro en linea, Noches Palacio, Noches Palacio Octubre, promociones especiales, ellas, ellos, calzado y accesorios, belleza, tecnología, hogar y gourmet, deportes, infantiles, apple, samsung, benefit, kiehls, nespresso, michael kors, mk, tane, relojes finos, nike, burberry, HOTSALE, Hot Sale, Venta exclusiva online, promociones exclusivas online, descuentos exclusivos oline"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link href="css/styles.min.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
 <link href="css/sass.min.css" rel="stylesheet" />
 </head>
 <body ng-app="app" class="background-body">
@@ -36,7 +36,7 @@
           <div class="car-price-detail flip-container vertical" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
               <div class="front">
-                <span class="detail">Sub total</span>
+                <span class="detail">Subtotal</span>
                 <span class="price">
                   $12,000.00
                 </span>
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="mst mcp-wrapper" id="mp-menu-18"  ng-controller="headerCtrl as vm">
+      <div class="mst mcp-wrapper" id="mp-menu-18" >
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="mcp-pushnew-menu">
             <div class="mp-pusher" id="mp-pusher">
@@ -80,13 +80,15 @@
                         </a>
                         <div class="grid-container3">
                           <span class="arrow-bottom"></span>
-                          <div class="grid-column grid-column3 mp-level">
-                            <a class="mp-back" href="#">&larr; Departamentos</a>
+                          <div class="grid-column grid-column3 mp-level" ng-controller="headerCtrl as vm">
+                            <a class="mp-back" href="#"><i class="icon-left"></i>
+                              <span>Departamentos</span>
+                            </a>
                             <ul class="level1">
                               <li ng-repeat="item in vm.menu" class="autosub-item level1-{{$index + 1}}">
                                   <a title="{{item.label}}" href="#" target="_self">
                                     <i class="icon-left"></i>
-                                    <span>{{item}}</span>
+                                    <span>{{item.label}}</span>
                                   </a>
                                   <div ng-if="item.children.length > 0" class="grid-container5">
                                     <div class="content-sub-menu">
@@ -139,7 +141,7 @@
                     </li>
                     <li>
                       <a title="Seguros" href="#" target="_self">
-                          <i class="icon-mobile-list icon-card"></i>
+                          <i class="icon-mobile-list icon-seguros"></i>
                           <span>Seguros</span>
                       </a>
                     </li>
@@ -185,16 +187,9 @@
   </div>
   <div class="row">
     <div id="content-slider" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <img src="img/bk-modelo.png" alt="banner"/>
+      <img src="img/bk-modelo.png" alt="banner" />
     </div>
   </div>
 </body>
-<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/menu/modernizr.custom.js"></script>
-<script src="js/menu/classie.js"></script>
-<script src="js/menu/mlpushmenu.js"></script>
-<script type="text/javascript" src="js/animations.js"></script>
-<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/scripts.min.js"></script>
 </html>
