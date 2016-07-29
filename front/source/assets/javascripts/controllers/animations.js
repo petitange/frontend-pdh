@@ -1,7 +1,10 @@
-var mobileBreakPoint = 768,
+var mobileBreakPoint = 1024,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
-    });
+    }),
+    nav = $('#mp-menu-18'),
+    car = $('#header-minicart-container'),
+    scrolled = false;
 //Init scripts
 $(document).ready(function () {
   var widthScreen = getWidthScreen ();
@@ -11,6 +14,24 @@ $(document).ready(function () {
 
 $(window).load(function () {
   $('.loader').fadeOut('slow');
+});
+
+$(window).scroll(function () {
+  if (140 < $(window).scrollTop() && !scrolled) {
+       nav.addClass('menu-fixed').animate({ top: '0px' }, 300);
+       car.addClass('car-fixed').animate({ top: '-10px' }, 300);
+       scrolled = true;
+   }
+
+  if (140 > $(window).scrollTop() && scrolled) {
+      //animates it out of view
+      nav.animate({ top: '-30px' });
+      car.animate({ top: '-30px' });
+      //sets it back to default style
+      nav.removeClass('menu-fixed');
+      car.removeClass('car-fixed');
+      scrolled = false;
+   }
 });
 
 $('.content-close-menu').click(function () {

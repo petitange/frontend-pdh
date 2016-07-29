@@ -9,11 +9,12 @@ var gulp = require('gulp'),
     }),
     config = require('./config/config.json'),
     css = require('./config/styles.json');
-
+    console.log('plugins', plugins);
 gulp.task('fonts', function() {
     return gulp.src(config.path.fonts)
     .pipe(gulp.dest(config.path.build + 'css/fonts'))
 });
+
 gulp.task('sass', function() {
   return gulp.src([config.path.scss])
     .pipe(plugins.sourcemaps.init())
@@ -23,13 +24,14 @@ gulp.task('sass', function() {
       cascade: false
     }))
     .pipe(plugins.rename('sass.css'))
+    .pipe(plugins.combineMq({beautify: false}))
     .pipe(gulp.dest(config.path.build + 'css'))
     .pipe(plugins.cssnano())
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(plugins.rename({ extname: '.min.css' }))
     .pipe(gulp.dest(config.path.build + 'css'));
 });
-console.log('css.path', css.path);
+
 gulp.task('stylesheets', ['sass', 'fonts'], function() {
   return gulp.src(css.path)
     .pipe(plugins.rename('styles.css'))

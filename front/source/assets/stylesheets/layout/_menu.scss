@@ -162,7 +162,7 @@
     padding: 0px 40px 0px 0px;
     position: relative;
     text-align: left;
-    height: 40px;
+    height: 45px;
     @include bp-ipad-portrait {
       padding: 0px 27px 0px 0px;
     }
@@ -467,6 +467,15 @@
     @include size-max-content();
     padding: 0px;
   }
+  &.menu-fixed {
+		z-index: 1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: #252525;
+	}
+
   #mp-pusher {
     @include bp-medium {
       transform: translate3d(0px, 0px, 0px) !important;
@@ -530,7 +539,9 @@
               }
               i {
                 &.icon-left {
-                  display: none;
+                  @include bp-small {
+                    display: none;
+                  }
                 }
               }
             }
