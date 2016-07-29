@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     }),
     config = require('./config/config.json'),
     css = require('./config/styles.json');
-    console.log('plugins', plugins);
 gulp.task('fonts', function() {
     return gulp.src(config.path.fonts)
     .pipe(gulp.dest(config.path.build + 'css/fonts'))
