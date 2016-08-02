@@ -31,7 +31,7 @@
 		right: 0;
 		top: -9px;
 		border: none !important;
-		z-index: 2;
+		z-index: 9999;
 	}
   i {
     @include bp-medium {

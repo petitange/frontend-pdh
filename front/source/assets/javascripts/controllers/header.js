@@ -6,7 +6,9 @@
     .controller('headerCtrl', headerCtrl);
 
   function headerCtrl() {
+    /*jshint validthis:true */
     var vm = this;
+
     vm.menu = [
       {
         label: 'eBoutiques',
@@ -2420,4 +2422,4 @@
       }
     ];
   };
-})();
+})()

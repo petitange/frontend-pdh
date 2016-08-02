@@ -466,15 +466,19 @@
   @include bp-medium {
     @include size-max-content();
     padding: 0px;
+    position: relative;
+    z-index: 999;
   }
-  &.menu-fixed {
-		z-index: 1;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		background: #252525;
-	}
+  .mcp-pushnew-menu {
+    &.menu-fixed {
+  		z-index: 10;
+  		position: fixed;
+  		left: 0;
+  		top: 0;
+  		width: 100%;
+  		background: #252525;
+  	}
+  }
 
   #mp-pusher {
     @include bp-medium {
