@@ -5,6 +5,6 @@
     "bower_components/flexslider/jquery.flexslider-min.js",
     "./front/source/assets/plugins/**/*.js",
     "./front/source/assets/javascripts/app.js",
-    "./front/source/assets/javascripts/controllers/**/*.js"
+    "./front/source/assets/javascripts/controllers/*.js"
   ]
 }

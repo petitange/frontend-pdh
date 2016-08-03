@@ -14,11 +14,24 @@ gulp.task('clean-scripts', function(callback) {
     del(config.path.build + 'js', callback);
 });
 
-gulp.task('scripts', function() {
-    return gulp.src(scripts.plugins)
-    .pipe(plugins.concat('scripts.js'))
-    .pipe(gulp.dest(config.path.build + 'js'))
-    .pipe(plugins.uglify())
-    .pipe(plugins.rename({ extname: '.min.js' }))
-    .pipe(gulp.dest(config.path.build + 'js'));
+gulp.task('scripts-black', function() {
+  var blackScript = scripts.plugins;
+  blackScript.push("./front/source/assets/javascripts/controllers/black/*.js");
+  return gulp.src(blackScript)
+  .pipe(plugins.concat('scripts-black.js'))
+  .pipe(gulp.dest(config.path.build + 'js'))
+  .pipe(plugins.uglify())
+  .pipe(plugins.rename({ extname: '.min.js' }))
+  .pipe(gulp.dest(config.path.build + 'js'));
+});
+
+gulp.task('scripts-white', function() {
+  var whiteScript = scripts.plugins;
+  whiteScript.push("./front/source/assets/javascripts/controllers/white/*.js");
+  return gulp.src(whiteScript)
+  .pipe(plugins.concat('scripts-white.js'))
+  .pipe(gulp.dest(config.path.build + 'js'))
+  .pipe(plugins.uglify())
+  .pipe(plugins.rename({ extname: '.min.js' }))
+  .pipe(gulp.dest(config.path.build + 'js'));
 });

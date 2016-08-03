@@ -1,0 +1,92 @@
+.mcp-pushnew-menu {
+  @include bp-medium {
+    .content-float {
+      position: absolute;
+      top: -98px;
+      text-align: right;
+    }
+  }
+}
+
+#content-secundary-menu {
+  @include bp-medium {
+    right: 105px;
+    width: 550px;
+  }
+  @include bp-small {
+    width: 100%;
+    height: 135px;
+    display: block;
+    padding-left: 10px;
+  }
+  ul {
+    @include bp-medium {
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+  }
+  .secundary-menu {
+    @include bp-small {
+      margin: 25px 10px;
+    }
+    li {
+      @include bp-medium {
+        display: inline-table;
+      }
+      a {
+        @include bp-medium {
+          font-size: 11px;
+          color: $color-black;
+          font-family: $font-gotham-book, $font-secondary;
+          margin-right: 25px;
+        }
+        @include bp-small {
+          color: $color-white;
+          font-size: 13px;
+          height: 30px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#content-account-links {
+  @include bp-medium {
+    right: 0px;
+    width: 112px;
+    height: 28px;
+    text-align: center;
+    background-color: #d4d4d4;
+  }
+  @include bp-small {
+    height: 42px;
+    color: #666666;
+    background-color: #F0F0F0;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    margin-top: 75px;
+  }
+  a {
+    @include bp-medium {
+      font-size: 11px;
+      font-family: $font-gotham-book, $font-secondary;
+      color: $color-brownish-grey;
+      padding-top: 7px;
+      display: block;
+    }
+    @include bp-small {
+      color: #666666;
+      font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      letter-spacing: 0.4px;
+    }
+    &:hover {
+      @include bp-small {
+        text-decoration: none;
+      }
+    }
+  }
+}

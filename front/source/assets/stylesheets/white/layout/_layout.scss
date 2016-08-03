@@ -1,0 +1,31 @@
+@include font-face($font-icomoon, $font-icomoon-path);
+@include font-face($font-gotham-medium, $font-gotham-medium-path);
+@include font-face($font-gotham-book, $font-gotham-book-path);
+@include font-face($font-gotham-bold, $font-gotham-bold-path);
+@include icon-list($icons);
+
+body {
+  &.background-body {
+    padding: 0;
+    margin: 0;
+    background-color: $background-color-grey;
+  }
+  .row {
+    margin-right: 0px;
+  }
+  .loader {
+  	@include generate-loader($img-loader);
+  }
+  #content-slider {
+    height: 1000px;
+    overflow: hidden;
+  }
+}
+
+[class^="icon-"] {
+  @include font-icon($font-icomoon);
+}
+
+[class*=" icon-"] {
+  @extend [class^="icon-"];
+}

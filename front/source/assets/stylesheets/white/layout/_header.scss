@@ -1,0 +1,61 @@
+#header {
+  background-color: $background-color-white;
+  .content-header {
+    height: 100%;
+    width: 100%;
+    @include bp-small {
+      height: 60px;
+    }
+  }
+}
+
+.toolheader {
+  height: 111px;
+  @include size-max-content();
+  @include bp-large {
+    width: 100%;
+    padding-left: 15px;
+  }
+  @include bp-small {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
+
+.remove-padding-right {
+  padding-right: 0px;
+  margin-top: 65px;
+  @include bp-large {
+    padding-right: 15px;
+  }
+}
+
+.banner-right {
+  @include bp-large {
+    display: none
+  }
+}
+
+#content-menu-header {
+  background-color: $color-ligth-grey-w;
+  height: 28px;
+}
+
+.logo {
+  @include bp-iphone-portrait {
+    float: right;
+    margin: 10px -15px 0px 0px !important;
+  }
+  @include bp-small {
+    float: right;
+    margin: 14px;
+  }
+  img {
+    @include bp-medium {
+      max-width: 193px;
+    }
+    @include bp-small {
+      max-width: 112px;
+    }
+  }
+}

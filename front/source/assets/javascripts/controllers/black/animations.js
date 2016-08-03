@@ -1,3 +1,4 @@
+//Black
 var mobileBreakPoint = 1024,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
@@ -17,13 +18,13 @@ $(window).load(function () {
 });
 
 $(window).scroll(function () {
-  if (140 < $(window).scrollTop() && !scrolled) {
+  if ($(window).scrollTop() > 140  && !scrolled) {
     nav.addClass('menu-fixed').animate({ top: '0px' }, 300);
     car.addClass('car-fixed').animate({ top: '-10px' }, 300);
     scrolled = true;
   }
 
-  if (140 > $(window).scrollTop() && scrolled) {
+  if ($(window).scrollTop() < 140 && scrolled) {
     //animates it out of view
     nav.animate({ top: '-30px' });
     car.animate({ top: '-30px' });
