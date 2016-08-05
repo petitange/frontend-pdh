@@ -48,6 +48,23 @@ gulp.task('sass-white', function() {
     .pipe(gulp.dest(config.path.build + 'css'));
 });
 
+gulp.task('gridle', function() {
+  return gulp.src(["./front/source/assets/stylesheets/gridle/**/*.scss"])
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(plugins.rename('gridle.css'))
+    .pipe(plugins.combineMq({beautify: false}))
+    .pipe(gulp.dest(config.path.build + 'css'))
+    .pipe(plugins.cssnano())
+    .pipe(plugins.sourcemaps.write('.'))
+    .pipe(plugins.rename({ extname: '.min.css' }))
+    .pipe(gulp.dest(config.path.build + 'css'));
+});
+
 gulp.task('stylesheets', ['sass-black', 'sass-white', 'fonts'], function() {
   return gulp.src(css.path)
     .pipe(plugins.rename('styles.css'))

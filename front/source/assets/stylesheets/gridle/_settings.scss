@@ -1,0 +1,14 @@
+// import gridle
+@import "gridle/gridle";
+
+// setting up the grid
+@include gridle_setup( (
+	context : 12,
+	gutter-width : 20px
+) );
+
+// make the use of media queries a piece of cake
+@include gridle_register_state ( mobile , (
+	max-width : 480px,
+	gutter-width : 16px
+) );

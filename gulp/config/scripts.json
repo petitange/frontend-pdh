@@ -2,9 +2,11 @@
   "plugins" : [
     "bower_components/jquery/dist/jquery.min.js",
     "bower_components/angular/angular.min.js",
+    "bower_components/angular-contentful/dist/angular-contentful.min.js",
     "bower_components/flexslider/jquery.flexslider-min.js",
     "./front/source/assets/plugins/**/*.js",
     "./front/source/assets/javascripts/app.js",
+    "./front/source/assets/javascripts/config.js",
     "./front/source/assets/javascripts/controllers/*.js"
   ]
 }

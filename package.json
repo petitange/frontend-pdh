@@ -18,7 +18,6 @@
   "scripts": {
     "test": ""
   },
-  "dependencies": {},
   "devDependencies": {
     "del": "1.1.*",
     "gulp": "~3.9.0",

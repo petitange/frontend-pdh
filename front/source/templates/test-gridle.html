@@ -1,0 +1,34 @@
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>El Palacio de Hierro –  Tienda Online El Palacio de Hierro</title>
+<meta name="keywords" content="Regalos, Tarjeta Palacio, Promociones Palacio, Martes tarjeta Palacio, Michael Kors, Kors, Michael, Casa Palacio, horarios tiendas palacio, Liverpool, Sears, Sanborns, Solo Sanborns, shopping store, tienda online, Liverpool, Liverpool.com, tecnología, línea blanca, computo, smarthphones, juguetes, moda, herramientas para hogar, jardín, hogar, muebles, decoración, muebles, deportes, cuidado personal, sears me entiende, solo sanborns, Primavera 3014, Feria del mueble y del hogar, Palacio de Hierro Facturacion, palacio de hierro en linea, Noches Palacio, Noches Palacio Octubre, promociones especiales, ellas, ellos, calzado y accesorios, belleza, tecnología, hogar y gourmet, deportes, infantiles, apple, samsung, benefit, kiehls, nespresso, michael kors, mk, tane, relojes finos, nike, burberry, HOTSALE, Hot Sale, Venta exclusiva online, promociones exclusivas online, descuentos exclusivos oline"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="css/gridle.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app" ng-controller="pageContentfulCtrl as vm" class="background-body">
+<div class="container">
+  <div class="row">
+    <div class="gr-12" id="header">
+      {{vm.fields | json}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="gr-4 gr-12@mobile" id="content">
+        <img src="https:{{vm.fields.bannerIzquierdo.fields.file.url}}" alt="{{vm.fields.bannerIzquierdo.fields.description}}"  title="{{vm.fields.bannerIzquierdo.fields.title}}"/>
+    </div>
+    <div class="gr-8 gr-12@mobile" id="sidebar" >
+      <h1 >{{vm.fields.text}}</h1>asdas
+      {{vm.fields.parrafo}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="gr-4" ng-repeat="slider in vm.fields.slider track by $index">
+      <img src="https:{{slider.fields.file.url}}" alt="{{slider.fields.description}}"  title="{{slider.fields.title}}"/>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/scripts-contentful.min.js"></script>
+</html>
