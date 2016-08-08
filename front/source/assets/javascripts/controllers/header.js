@@ -6,7 +6,7 @@
     .controller('headerCtrl', headerCtrl);
 
   function headerCtrl() {
-    /*jshint validthis:true */
+    /*jshint validthis:false */
     var vm = this;
 
     vm.menu = [

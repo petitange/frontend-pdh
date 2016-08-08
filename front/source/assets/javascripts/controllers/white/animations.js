@@ -1,4 +1,5 @@
-//white
+
+/*eslint new-cap: ["error", { "newIsCap": false }]*/
 var mobileBreakPoint = 1024,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
