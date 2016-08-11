@@ -184,22 +184,13 @@
       </div>
     </header>
   </div>
-  <div id="content-slider" class="row">
+  <div id="content-slider" class="row" ng-controller="pageContentfulCtrl as vm">
     <section class="slider">
       <div class="flexslider">
         <ul class="slides">
-          <li>
-	    	    <img src="img/bk-modelo.png" alt="banner" />
-	    		</li>
-	    		<li>
-	    	    <img src="img/bk-modelo.png" alt="banner" />
-	    		</li>
-	    		<li>
-	    	      <img src="img/bk-modelo.png" alt="banner" />
-	    		</li>
-	    		<li>
-	    	    <img src="img/bk-modelo.png" alt="banner" />
-	    		</li>
+          <li ng-repeat="slider in vm.fields.sliderHome track by $index">
+            <img src="https:{{slider.fields.file.url}}" alt="{{slider.fields.description}}"  title="{{slider.fields.title}}"/>
+          </li>
         </ul>
         <div class="custom-navigation">
           <a href="#" class="flex-prev"><i class="icon-left"></i></a>

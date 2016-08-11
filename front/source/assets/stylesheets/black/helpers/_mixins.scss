@@ -109,10 +109,10 @@
 }
 
 @mixin animate-menu-translation($init, $end) {
-  -o-transform-origin: $init $init;
-	-ms-transform-origin: $init $init;
-	-moz-transform-origin: $init $init;
-	-webkit-transform-origin: $init $init;
+  -o-transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
 	-o-transition: -o-transform $end, opacity $end;
 	-ms-transition: -ms-transform $end, opacity $end;
 	-moz-transition: -moz-transform $end, opacity $end;

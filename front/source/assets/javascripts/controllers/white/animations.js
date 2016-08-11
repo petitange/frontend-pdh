@@ -10,12 +10,16 @@ var mobileBreakPoint = 1024,
 //Init scripts
 $(document).ready(function () {
   var widthScreen = getWidthScreen ();
-
+  getSizeMenu(widthScreen);
   getAnimations();
 });
 
 $(window).load(function () {
   $('.loader').fadeOut('slow');
+});
+
+$(window).resize(function () {
+  var widthScreen = getWidthScreen ();
 });
 
 //Sticky Menu
@@ -55,10 +59,7 @@ function animateLines() {
 
 $(window).resize(function () {
   var widthScreen = getWidthScreen ();
-});
-
-$('content-sub-menu').resize(function () {
-  console.log($('content-sub-menu').height());
+  getSizeMenu(widthScreen);
 });
 
 function getSizeMenu(widthScreen) {
@@ -67,14 +68,14 @@ function getSizeMenu(widthScreen) {
   } else {
     $('.menu-creator-pro .grid-container5').css('width', 1115);
   }
-  getSizeMeuMobile(widthScreen);
+  getSizeMenuMobile(widthScreen);
   if (widthScreen < 910) {
     groupSubMenu(210, 571);
   } else {
     groupSubMenu(190, 571);
   }
 }
-function getSizeMeuMobile(widthScreen) {
+function getSizeMenuMobile(widthScreen) {
   if (widthScreen < 500) {
     $('.mcp-wrapper #menu-group-1').css('width', widthScreen);
     $('.mp-pusher.mp-pushed').css('transform', 'translate3d(' + widthScreen + 'px, 0px, 0px)');

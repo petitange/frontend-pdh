@@ -188,7 +188,7 @@
       <div class="flexslider">
         <ul class="slides">
           <li ng-repeat="slider in vm.fields.sliderHome track by $index">
-            <img src="https:{{slider.fields.file.url}}" alt="{{slider.fields.description}}"  title="{{slider.fields.title}}"/>
+            <img ng-show="slider.fields.file.url" ng-src="https:{{slider.fields.file.url}}" alt="{{slider.fields.description}}"  title="{{slider.fields.title}}"/>
           </li>
         </ul>
         <div class="custom-navigation">

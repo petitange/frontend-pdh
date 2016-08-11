@@ -256,7 +256,7 @@
     	width: 100%;
     	min-height: 50px;
     	padding: 30px 15%;
-    	@include animate-menu-translation(0%, 2s);
+    	@include animate-menu-translation(0%, 0.4s);
       @include bp-small {
         margin-top: 25px;
         min-height: 500px;

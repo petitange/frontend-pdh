@@ -15,9 +15,18 @@ gulp.task('clean-scripts', function(callback) {
 });
 
 gulp.task('scripts-black', function() {
-  var blackScript = scripts.plugins;
-  blackScript.push("./front/source/assets/javascripts/controllers/black/*.js");
-  return gulp.src(blackScript)
+  return gulp.src([
+  "bower_components/jquery/dist/jquery.min.js",
+  "bower_components/flexslider/jquery.flexslider-min.js",
+  "bower_components/angular/angular.min.js",
+  "bower_components/angular-contentful/dist/angular-contentful.min.js",
+  "./front/source/assets/plugins/**/*.js",
+  "./front/source/assets/javascripts/app.js",
+  "./front/source/assets/javascripts/config.js",
+  "./front/source/assets/javascripts/controllers/pageContent.controller.js",
+  "./front/source/assets/javascripts/controllers/header.js",
+  "./front/source/assets/javascripts/controllers/slider.js",
+  "./front/source/assets/javascripts/controllers/black/animations.js"])
   .pipe(plugins.concat('scripts-black.js'))
   .pipe(gulp.dest(config.path.build + 'js'))
   .pipe(plugins.uglify())
@@ -49,9 +58,9 @@ gulp.task('scripts-white', function() {
   "./front/source/assets/plugins/**/*.js",
   "./front/source/assets/javascripts/app.js",
   "./front/source/assets/javascripts/config.js",
-    "./front/source/assets/javascripts/controllers/pageContent.controller.js",
-    "./front/source/assets/javascripts/controllers/header.js",
-    "./front/source/assets/javascripts/controllers/slider.js",
+  "./front/source/assets/javascripts/controllers/pageContent.controller.js",
+  "./front/source/assets/javascripts/controllers/header.js",
+  "./front/source/assets/javascripts/controllers/slider.js",
   "./front/source/assets/javascripts/controllers/white/animations.js"])
   .pipe(plugins.concat('scripts-white.js'))
   .pipe(plugins.uglify())

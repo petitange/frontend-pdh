@@ -6,12 +6,28 @@
       & > a {
         color: $color-black;
       	background: none;
+        span {
+          border-bottom: 3px solid $color-black;
+          width: auto;
+          -webkit-transition: all .5s ease 0s;
+          -moz-transition: all .5s ease 0s;
+          -o-transition: all .5s ease 0s;
+          transition: all .5s ease 0s;
+        }
       }
     }
     &.current {
       & > a {
         color: $color-black;
       	background: none;
+        span {
+          border-bottom: 3px solid $color-black;
+          width: auto;
+          -webkit-transition: all .5s ease 0s;
+          -moz-transition: all .5s ease 0s;
+          -o-transition: all .5s ease 0s;
+          transition: all .5s ease 0s;
+        }
       }
     }
   }
@@ -148,9 +164,6 @@
       font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       width: 100%;
       padding: 0px 0px 0px 10px;
-    }
-    &:first-child {
-      padding-left: 0px;
     }
     a {
     	display: block;

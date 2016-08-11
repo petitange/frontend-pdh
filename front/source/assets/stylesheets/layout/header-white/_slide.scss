@@ -279,6 +279,9 @@
 .custom-navigation {
   a {
     &.flex-next {
+      @include bp-small {
+        display: none;
+      }
       width: 56px;
       height: 56px;
       border: solid 1px #989898;
@@ -297,6 +300,9 @@
       }
     }
     &.flex-prev {
+      @include bp-small {
+        display: none;
+      }
       @extend .flex-next;
       top: 370px;
       -webkit-transform: rotateX(180deg);

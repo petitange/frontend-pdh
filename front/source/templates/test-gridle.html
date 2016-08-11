@@ -11,7 +11,8 @@
 <div class="container">
   <div class="row">
     <div class="gr-12" id="header">
-      {{vm.fields | json}}
+      <h1 >{{vm.fields.text}}</h1>asdas
+      {{vm.fields.parrafo}}
     </div>
   </div>
   <div class="row">
@@ -21,11 +22,6 @@
     <div class="gr-8 gr-12@mobile" id="sidebar" >
       <h1 >{{vm.fields.text}}</h1>asdas
       {{vm.fields.parrafo}}
-    </div>
-  </div>
-  <div class="row">
-    <div class="gr-4" ng-repeat="slider in vm.fields.slider track by $index">
-      <img src="https:{{slider.fields.file.url}}" alt="{{slider.fields.description}}"  title="{{slider.fields.title}}"/>
     </div>
   </div>
 </div>
