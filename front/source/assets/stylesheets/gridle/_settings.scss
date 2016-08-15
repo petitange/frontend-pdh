@@ -2,13 +2,18 @@
 @import "gridle/gridle";
 
 // setting up the grid
-@include gridle_setup( (
+@include gridle_setup((
 	context : 12,
 	gutter-width : 0px
-) );
+	max-width : 1024px
+));
 
 // make the use of media queries a piece of cake
-@include gridle_register_state ( mobile , (
-	max-width : 480px,
-	gutter-width : 0px
-) );
+@include gridle_register_state(mobile, (
+	max-width : 480px
+));
+
+@include gridle_register_state(tablet, (
+  min-width : 481px,
+  max-width : 1024px
+)) ;
