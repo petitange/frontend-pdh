@@ -66,6 +66,6 @@ gulp.task('scripts-white', function() {
   .pipe(plugins.uglify())
   .pipe(plugins.rename({ extname: '.min.js' }))
   .pipe(plugins.rev())
-  .pipe(plugins.rev.manifest())
+  .pipe(plugins.rev.manifest('js-rev-manifest.json'))
   .pipe(gulp.dest(config.path.build + 'js'));
 });

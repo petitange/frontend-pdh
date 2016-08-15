@@ -84,9 +84,8 @@
             	  font-size: 12px;
             	  font-weight: 500;
             	  letter-spacing: -0.1px;
-            	  color: $color-brownish-grey;
+            	  color: $color-black;
                 &:hover {
-              	  color: $color-red;
               		font-weight: bold;
                   i {
                     &.icon-sale {
@@ -171,7 +170,6 @@
     	text-decoration: none;
     	font-size: 11px;
     	font-family: "Gotham", Arial, sans-serif;
-      color: $color-brownish-grey;
     	line-height:35px;
       text-transform: uppercase;
       @include bp-ipad-portrait {
@@ -365,7 +363,6 @@
       	margin-bottom: 13px;
       }
       a {
-      	color: $color-brownish-grey;
       	font-family: "Gotham-Book", Arial, sans-serif;
       	font-weight: normal;
       	line-height: 1.3em;

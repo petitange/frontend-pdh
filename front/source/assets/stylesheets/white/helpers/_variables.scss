@@ -11,33 +11,20 @@ $font-secondary: Arial, Helvetica, sans-serif;
 
 // Map icon names to font unicode characters
 $icons: (
-    seguros: '\6c',
-    sale: '\6b',
     bag: '\69',
     close: '\6a',
     left: '\67',
-    search: '\68',
-    user: '\66',
-    card: '\63',
-    casa: '\65',
-    departamento: '\61',
-    gift: '\62',
-    viajes: '\64'
+    search: '\68'
 );
 
 //colors
-$color-black:                        #252525;
-$color-brownish-grey:                #656565;
-$color-dark-grey:                    #484848;
+$color-black:                        #333333;
+$color-dark-grey:                    #666666;
 $color-golden-yellow:                #ffc425;
-$color-grey:                         #565656;
-$color-ligth-grey:                   #bfbfbf;
-$color-red:                          #ff001f;
+$color-grey:                         #999999;
+$color-green:                        #20bc66;
+$color-ligth-grey:                   #f0f0f0;
 $color-white:                        #ffffff;
-$color-ligth-grey-w:                 #f0f0f0;
-$color-dark-grey-w:                  #d4d4d4;
-$color-wine:                         #36120a;
-
 //images
 $img-loader:                         '../img/page-loader.gif';
 

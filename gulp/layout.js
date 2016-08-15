@@ -24,3 +24,8 @@ gulp.task('layouts', function () {
   return gulp.src([config.path.html])
     .pipe(gulp.dest(config.path.build));
 });
+
+gulp.task('layouts-php', function () {
+  return gulp.src([config.path.php])
+    .pipe(gulp.dest(config.path.build));
+});

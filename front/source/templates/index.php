@@ -1,3 +1,24 @@
+<?php
+/**
+* @param  string  $filename
+* @param  string  $manifest_path
+* @return string
+*/
+function asset_path($filename, $manifest_path) {
+  if (file_exists($manifest_path)) {
+      $manifest = json_decode(file_get_contents($manifest_path), TRUE);
+  } else {
+      $manifest = [];
+  }
+
+  if (array_key_exists($filename, $manifest)) {
+      return $manifest[$filename];
+  }
+
+  return $filename;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +27,8 @@
 <meta name="keywords" content="Regalos, Tarjeta Palacio, Promociones Palacio, Martes tarjeta Palacio, Michael Kors, Kors, Michael, Casa Palacio, horarios tiendas palacio, Liverpool, Sears, Sanborns, Solo Sanborns, shopping store, tienda online, Liverpool, Liverpool.com, tecnología, línea blanca, computo, smarthphones, juguetes, moda, herramientas para hogar, jardín, hogar, muebles, decoración, muebles, deportes, cuidado personal, sears me entiende, solo sanborns, Primavera 3014, Feria del mueble y del hogar, Palacio de Hierro Facturacion, palacio de hierro en linea, Noches Palacio, Noches Palacio Octubre, promociones especiales, ellas, ellos, calzado y accesorios, belleza, tecnología, hogar y gourmet, deportes, infantiles, apple, samsung, benefit, kiehls, nespresso, michael kors, mk, tane, relojes finos, nike, burberry, HOTSALE, Hot Sale, Venta exclusiva online, promociones exclusivas online, descuentos exclusivos oline"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link href="css/sass-white.min.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
+<link href="css/<?php echo asset_path('sass-white.css', 'css/css-rev-manifest.json');?>" rel="stylesheet" />
 </head>
 <body ng-app="app"  class="background-body">
   <div class="loader"></div>
@@ -200,5 +222,5 @@
     </section>
   </div>
 </body>
-<script type="text/javascript" src="js/scripts-white.min.js"></script>
+<script type="text/javascript" src="js/<?php echo asset_path('scripts-white.min.js', 'js/js-rev-manifest.json');?>"></script>
 </html>

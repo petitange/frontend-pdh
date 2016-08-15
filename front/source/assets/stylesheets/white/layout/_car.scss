@@ -12,10 +12,8 @@
   }
   &.active {
     @include bp-medium {
-      color: $color-wine;
     }
     @include bp-small {
-      color: $color-wine;
     }
     span {
       background-position: 0px -49px;

@@ -4,11 +4,15 @@
     "fonts":     "./front/source/assets/fonts/**",
     "data":    "./front/data/example.json",
     "scssBlack":    "./front/source/assets/stylesheets/black/**/*.scss",
-    "scssWhite":    "./front/source/assets/stylesheets/white/**/*.scss",
+    "scssWhite": [
+      "./front/source/assets/stylesheets/white/**/*.scss",
+      "./front/source/assets/stylesheets/gridle/**/*.scss"
+    ],
     "styles":    "./front/source/assets/stylesheets/**/*.css",
     "img":     "./front/source/assets/images/**/*",
     "js":      "./front/source/assets/javascripts/**/*.js",
     "html":    "./front/source/templates/*.html",
+    "php":    "./front/source/templates/*.php",
     "tmpl":    "./front/source/templates/**/*.html",
     "build":   "./front/build/"
   },
