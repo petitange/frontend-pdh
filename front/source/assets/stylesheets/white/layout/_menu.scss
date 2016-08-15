@@ -7,12 +7,9 @@
         color: $color-black;
       	background: none;
         span {
-          border-bottom: 3px solid $color-black;
-          width: auto;
-          -webkit-transition: all .5s ease 0s;
-          -moz-transition: all .5s ease 0s;
-          -o-transition: all .5s ease 0s;
-          transition: all .5s ease 0s;
+          &:after {
+            width: 50px;
+          }
         }
       }
     }
@@ -21,12 +18,9 @@
         color: $color-black;
       	background: none;
         span {
-          border-bottom: 3px solid $color-black;
-          width: auto;
-          -webkit-transition: all .5s ease 0s;
-          -moz-transition: all .5s ease 0s;
-          -o-transition: all .5s ease 0s;
-          transition: all .5s ease 0s;
+          &:after {
+            width: 50px;
+          }
         }
       }
     }
@@ -171,9 +165,23 @@
     	font-size: 11px;
     	font-family: "Gotham", Arial, sans-serif;
     	line-height:35px;
+      color: $color-black;
       text-transform: uppercase;
       @include bp-ipad-portrait {
         font-size: 13px;
+      }
+      span {
+        position: relative;
+        padding-bottom: 5px;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          border-bottom: 2px solid $color-black;
+          transition: 0.4s;
+        }
       }
       i {
         &.icon-mobile-list {
