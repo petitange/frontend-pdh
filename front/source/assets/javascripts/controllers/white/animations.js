@@ -1,5 +1,3 @@
-
-/*eslint new-cap: ["error", { "newIsCap": false }]*/
 var mobileBreakPoint = 1024,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
@@ -10,7 +8,7 @@ var mobileBreakPoint = 1024,
 //Init scripts
 $(document).ready(function () {
   var widthScreen = getWidthScreen ();
-  getSizeMenu(widthScreen);
+  //getSizeMenu(widthScreen);
   getAnimations();
 });
 

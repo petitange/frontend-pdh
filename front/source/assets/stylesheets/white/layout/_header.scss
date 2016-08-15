@@ -10,23 +10,14 @@
 }
 
 .toolheader {
-  height: 111px;
+  height: 100px;
   @include size-max-content();
   @include bp-large {
     width: 100%;
-    padding-left: 15px;
   }
   @include bp-small {
     margin-top: 0px;
     width: 100%;
-  }
-}
-
-.remove-padding-right {
-  padding-right: 0px;
-  margin-top: 65px;
-  @include bp-large {
-    padding-right: 15px;
   }
 }
 
@@ -36,8 +27,8 @@
   }
 }
 
-#content-menu-header {
-  height: 28px;
+.header-hight {
+  height: 50px;
 }
 
 .logo {

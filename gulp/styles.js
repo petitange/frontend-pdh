@@ -40,15 +40,34 @@ gulp.task('sass-white', function() {
       cascade: false
     }))
     .pipe(plugins.rename('sass-white.css'))
-    .pipe(plugins.rev())
+  //  .pipe(plugins.rev())
     .pipe(plugins.combineMq({beautify: false}))
     .pipe(gulp.dest(config.path.build + 'css'))
     .pipe(plugins.cssnano())
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(plugins.rename({ extname: '.min.css' }))
-    .pipe(gulp.dest(config.path.build + 'css'))
+  //  .pipe(gulp.dest(config.path.build + 'css'))
+  //  .pipe(plugins.rev.manifest('css-rev-manifest.json'))
+    .pipe(gulp.dest(config.path.build + 'css'));
+});
 
-    .pipe(plugins.rev.manifest('css-rev-manifest.json'))
+gulp.task('sass-gridle', function() {
+  return gulp.src(config.path.gridle)
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(plugins.rename('gridle.css'))
+  //  .pipe(plugins.rev())
+    .pipe(plugins.combineMq({beautify: false}))
+    .pipe(gulp.dest(config.path.build + 'css'))
+    .pipe(plugins.cssnano())
+    .pipe(plugins.sourcemaps.write('.'))
+    .pipe(plugins.rename({ extname: '.min.css' }))
+  //  .pipe(gulp.dest(config.path.build + 'css'))
+  //  .pipe(plugins.rev.manifest('css-rev-manifest.json'))
     .pipe(gulp.dest(config.path.build + 'css'));
 });
 
