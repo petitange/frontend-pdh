@@ -9,12 +9,15 @@
 }
 
 #content-secundary-menu {
-  @include bp-medium {
-    right: -205px;
+  right: -205px;
+  width: 580px;
+  @include bp-large {
+    right: -25px;
     width: 580px;
   }
   @include bp-small {
     width: 100%;
+    right: 0px;
     height: 135px;
     display: block;
     padding-left: 10px;
@@ -42,7 +45,7 @@
           margin-right: 25px;
         }
         @include bp-small {
-          color: $color-white;
+          color: $color-black;
           font-size: 13px;
           height: 30px;
           text-decoration: none;
@@ -53,18 +56,21 @@
 }
 
 #content-account-links {
-  @include bp-medium {
-    right: -345px;
+  right: -325px;
+  @include bp-large {
+    right: -180px;
     width: 112px;
     height: 28px;
     text-align: center;
   }
   @include bp-small {
+    right: 0px;
     height: 42px;
+    text-decoration: none;
     color: #666666;
     background-color: #F0F0F0;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
     position: absolute;
     width: 100%;
     z-index: 999;

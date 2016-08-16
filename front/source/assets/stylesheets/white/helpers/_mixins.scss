@@ -82,7 +82,7 @@
 }
 
 @mixin box-car() {
-  width: 71%;
+  width: 65%;
   height: 50px;
   float: left;
 }
@@ -181,7 +181,7 @@
 }
 
 @mixin bp-large {
-  @media only screen and (max-width: 1330px) {
+  @media only screen and (max-width: 1240px) {
     @content;
   }
 }

@@ -1,5 +1,4 @@
 @include generate-margin-top-menu($menu-elements, $margin-top-menu);
-
 .menu-creator-pro-black {
   li {
     &:hover {
@@ -383,7 +382,7 @@
         }
         span {
           @include bp-small {
-            color: $color-white;
+            color: $color-black;
           }
         }
       }
@@ -505,6 +504,8 @@
         }
         @include bp-small {
           overflow-y: scroll;
+          overflow-x: hidden;
+          height: 100%;
         }
       }
       .mp-menu {
@@ -526,7 +527,7 @@
           }
           .level1 {
             @include bp-small {
-              margin: 35px 55px 0px;
+              margin: 35px 75px 0px;
             }
           }
           li {
