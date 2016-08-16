@@ -12,9 +12,7 @@
 .toolheader {
   height: 100px;
   @include size-max-content();
-  @include bp-large {
-    width: 100%;
-  }
+
   @include bp-small {
     margin-top: 0px;
     width: 100%;
@@ -29,9 +27,12 @@
 
 .header-hight {
   height: 50px;
+  position: relative;
 }
 
 .logo {
+  margin-top: 35px;
+  display: block;
   @include bp-iphone-portrait {
     float: right;
     margin: 10px -15px 0px 0px !important;

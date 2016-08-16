@@ -1,9 +1,11 @@
+@include animate-circle();
+
 #header-minicart-container {
   float: right;
-  color: $color-ligth-grey;
+  color: $color-black;
   @include bp-medium {
-    width: 39px;
-    height: 31px;
+    width: 50px;
+    height: 50px;
   }
   @include bp-small {
     width: 28px;
@@ -16,7 +18,7 @@
     @include bp-small {
     }
     span {
-      background-position: 0px -49px;
+      background-position: 0px 0px;
     }
   }
   &.car-fixed {
@@ -40,13 +42,17 @@
   }
   span {
     @include bp-medium {
-      padding-top: 12px;
+      padding-top: 18px;
       text-align: center;
+      z-index: 5;
       display: block;
-      font-size: 16px;
-      font-family: Gotham;
+      height: 30px;
+      width: 50px;
+      position: absolute;
+      font-size: 12px;
+      font-family: $font-gotham-medium;
       background: url('../img/bag.svg') no-repeat 0px 0px;
-      background-size: 39px 105px;
+      background-size: 50px 40px;
     }
     @include bp-small {
       padding-top: 11px;
@@ -62,39 +68,27 @@
     }
   }
 }
-/* flip car */
-.flip-container {
-  @include bp-small {
-    display: none;
-  }
-  perspective: 1000px;
+
+.flipper {
+  float: left;
+  width: 100%;
+  -webkit-transform: perspective(500);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: .5s;
   &:hover {
-    .flipper {
-      transform: rotateX(-180deg);
-    }
-  }
-  .flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  .front {
-    z-index: 2;
-    transform: rotateY(0deg);
-    @include back-face-visibility(hidden);
-    @include bp-small {
-      display: none;
+    -webkit-transform: perspective(500) rotateX(90deg) translateY(-25px) translateZ(25px);
+    .back {
+      background-color: $color-golden-yellow;
+      color: $color-black;
     }
   }
   .back {
-    transform: rotateX(180deg);
-    @include back-face-visibility(hidden);
-    @include bp-small {
-      display: none;
-    }
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 0;
+    -webkit-transition: .5s;
   }
 }
-/*end flip car*/
+
 .car-price-detail {
   @include bp-medium {
     @include box-car();
@@ -102,29 +96,35 @@
     border-right: none;
     div {
       &:first-child{
-        @include box-car();
         color: $color-black;
-        letter-spacing: -0.3px;
-        padding: 0px 15px;
+        height: 50px;
         font-family: $font-gotham-medium, $font-secondary;
       }
     }
     .back {
-      @include box-car();
       color: $color-white;
       font-size: 14px;
+      height: 50px;
       letter-spacing: -0.5px;
+      padding: 20px 35px;
       background-color: $background-color-golden-yellow;
-      padding: 8px 25px;
       font-family: $font-gotham-medium, $font-secondary;
     }
     .detail {
-       font-size: 10px;
+      font-size: 10px;
+      margin-top: 10px;
+      height: 10px;
+      text-align: right;
+      color: $color-grey;
+      width: 100%;
+      display: block;
     }
     .price {
       font-size: 14px;
+      text-align: right;
+      height: 40px;
+      width: 100%;
       float: left;
-      margin-top: -5px;
     }
   }
   @include bp-small {

@@ -2,7 +2,7 @@
   @include bp-medium {
     .content-float {
       position: absolute;
-      top: -98px;
+      top: -90px;
       text-align: right;
     }
   }
@@ -10,8 +10,8 @@
 
 #content-secundary-menu {
   @include bp-medium {
-    right: 105px;
-    width: 550px;
+    right: -205px;
+    width: 580px;
   }
   @include bp-small {
     width: 100%;
@@ -35,7 +35,8 @@
       }
       a {
         @include bp-medium {
-          font-size: 11px;
+          font-size: 10px;
+          text-decoration: none;
           color: $color-black;
           font-family: $font-gotham-book, $font-secondary;
           margin-right: 25px;
@@ -53,11 +54,10 @@
 
 #content-account-links {
   @include bp-medium {
-    right: 0px;
+    right: -345px;
     width: 112px;
     height: 28px;
     text-align: center;
-    background-color: #d4d4d4;
   }
   @include bp-small {
     height: 42px;
@@ -72,10 +72,12 @@
   }
   a {
     @include bp-medium {
-      font-size: 11px;
+      font-size: 10px;
       font-family: $font-gotham-book, $font-secondary;
-      padding-top: 7px;
+      padding-top: 6px;
       display: block;
+      text-decoration: none;
+      color: $color-green;
     }
     @include bp-small {
       color: #666666;
