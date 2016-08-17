@@ -10,20 +10,16 @@ $('#search input').focus(function () {
 });
 
 
-$("#search input" ).keypress(function( event ) {
+$('#search input' ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
   }
-
-  console.log( event );
-  $('#search .content-suggestions').css('display', 'block');
+  $('#search .content-suggestions').slideUp('medium');
 });
 
 $('#search .close-search').click(function () {
   var hasQueryString = $('#search input').val();
   if (!hasQueryString) {
-    //$('#search input').slideUp('medium');
-    console.log('cerrar')
     closeSearch()
   } else {
     $('#search input').val('');
@@ -31,6 +27,7 @@ $('#search .close-search').click(function () {
 });
 
 function closeSearch() {
+  $('body').css('overflow', 'auto');
   $('body .overlay-search').css('display', 'none');
   $('#toolbar-search #search.search-overlay').removeAttr('style');
   $('#search').removeClass('search-overlay');
@@ -39,6 +36,9 @@ function closeSearch() {
 }
 
 function openSearch() {
+  nav.removeClass('header-fixed');
+  scrolled = false;
+  $('body').css('overflow', 'hidden');
   $('#search').addClass('search-overlay');
   $('body .overlay-search').css('display', 'block');
   $('#search .close-search').css('display', 'block');

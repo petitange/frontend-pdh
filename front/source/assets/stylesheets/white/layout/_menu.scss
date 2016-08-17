@@ -147,6 +147,9 @@
     position: relative;
     text-align: left;
     height: 50px;
+    @include bp-medium-screens {
+      padding: 0px 10px;
+    }
     @include bp-ipad-portrait {
       padding: 0px 27px 0px 0px;
     }

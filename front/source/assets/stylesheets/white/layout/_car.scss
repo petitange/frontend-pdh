@@ -11,7 +11,7 @@
   width: 50px;
   height: 50px;
   @include bp-small {
-    padding-top: 7px;
+    padding-top: 5px;
   }
   &.active {
     span {
@@ -67,7 +67,7 @@
   @include bp-medium {
     @include box-car();
     color: $color-golden-yellow;
-    border-right: none;
+    overflow: hidden;
     div {
       &:first-child{
         color: $color-black;
@@ -87,6 +87,9 @@
         font-size: 12px;
         padding: 20px 30px;
       }
+      @include bp-medium-screens {
+        padding: 20px 22px;
+      }
     }
     .detail {
       font-size: 10px;
@@ -100,6 +103,9 @@
     .price {
       @include bp-large {
         font-size: 10px;
+      }
+      @include bp-medium-screens {
+        font-size: 11px;
       }
       font-size: 12px;
       text-align: right;

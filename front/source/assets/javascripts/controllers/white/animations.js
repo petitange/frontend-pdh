@@ -2,9 +2,9 @@ var mobileBreakPoint = 1024,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
     }),
-    nav = $('.mcp-pushnew-menu'),
-    car = $('#header-minicart-container'),
-    scrolled = false;
+    nav = $('#header'),
+    scrolled = false,
+    lastPositionScroll;
 //Init scripts
 $(document).ready(function () {
   var widthScreen = getWidthScreen ();
@@ -23,28 +23,43 @@ $(window).load(function () {
 });
 
 $(window).resize(function () {
-  var widthScreen = getWidthScreen ();
+  var widthScreen = getWidthScreen();
 });
 
 //Sticky Menu
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 140 && !scrolled) {
-    nav.addClass('menu-fixed').animate({ top: '0px' }, 300);
-    car.addClass('car-fixed').animate({ top: '-10px' }, 300);
+  var positionScroll;
+      positionScroll = $(window).scrollTop();
+      widthScreen = getWidthScreen();
+  if (positionScroll > 140 && !scrolled) {
+    nav.addClass('header-fixed').animate({ top: '0px' }, 300);
     scrolled = true;
   }
-
-  if ($(window).scrollTop() < 140  && scrolled) {
-    //animates it out of view
-    nav.animate({ top: '-30px' });
-    car.animate({ top: '-30px' });
-    //sets it back to default style
-    nav.removeClass('menu-fixed');
-    car.removeClass('car-fixed');
-    scrolled = false;
+  if(widthScreen > mobileBreakPoint) {
+    if (positionScroll > 140 && scrolled) {
+      if (lastPositionScroll > positionScroll) {
+        $('#header.header-fixed  #secundary-menu').animate({ height: '0px' }, 200);
+      } else {
+        $('#header.header-fixed  #secundary-menu').animate({ height: '50px' }, 200);
+      }
+    }
   }
+  if (positionScroll < 140  && scrolled) {
+    removeMenuSticky(widthScreen)
+  }
+  lastPositionScroll = positionScroll;
 });
 
+function removeMenuSticky(widthScreen) {
+  if(widthScreen > mobileBreakPoint) {
+    $('#header.header-fixed  #secundary-menu').animate({ height: '50px' }, 50, function () {
+      $('#header #secundary-menu').removeAttr('style');
+    });
+  }
+  nav.animate({ top: '-30px' });
+  nav.removeClass('header-fixed');
+  scrolled = false;
+}
 //Lines Animation when close the menu
 $('.content-close-menu').click(function () {
   menu._resetMenu();

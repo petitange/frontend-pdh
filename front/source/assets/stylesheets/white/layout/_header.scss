@@ -13,6 +13,57 @@
     left: 0;
     top: 0;
     width: 100%;
+    .toolheader {
+      height: 50px;
+    }
+    .logo {
+      margin-top: 0px;
+      img {
+        max-width: 115px;
+        margin-top: 10px;
+      }
+    }
+    #secundary-menu {
+      border-bottom: 1px solid $color-ligth-grey;
+    }
+    #toolbar-search {
+      position: absolute;
+      width: 1200px;
+      @include bp-small {
+        position: relative;
+        width: 20%;
+      }
+      @include bp-medium-screens {
+        width: 100%;
+      }
+      #search {
+        &.search-overlay {
+          input {
+            display: block;
+          }
+        }
+        .button {
+          padding-top: 5px;
+          margin-right: 15%;
+          @include bp-medium-screens {
+            margin-right: 18%;
+          }
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+    .mcp-pushnew-menu {
+      .content-float {
+        @include bp-medium {
+          top: -40px;
+        }
+      }
+    }
+    #empty-space {
+      display: none;
+    }
   }
 }
 .hidde-element-header {
@@ -48,10 +99,6 @@
 .logo {
   margin-top: 35px;
   display: block;
-  @include bp-iphone-portrait {
-    margin-top: 10px;
-    float: right;
-  }
   @include bp-small {
     margin-top: 10px;
     float: right;

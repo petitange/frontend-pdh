@@ -45,16 +45,21 @@
       display: none;
       width: 40px;
       height: 40px;
-      background-color: #000;
+      background-color: $color-black;
       border-radius: 50%;
       cursor: pointer;
       float: right;
-      color: $color-black;
+      @include bp-small {
+        background: none;
+      }
       i {
         font-size: 10px;
         margin: 15px 0px 0px 16px;
         display: block;
         color: $color-white;
+        @include bp-small {
+          color: $color-black;
+        }
       }
     }
     &.search-overlay {
@@ -69,8 +74,14 @@
       }
       @include bp-small {
         width: 95%;
-        top: 40px;
+        top: 50px;
         margin-left: -55%;
+      }
+      .button {
+        margin-right: 20px;
+        @include bp-small {
+          margin: -85px 40px;
+        }
       }
       input {
         padding-left: 35px;
@@ -78,6 +89,7 @@
           display: block;
           width: 85%;
           float: left;
+          font-size: 12px;
         }
       }
     }
@@ -153,6 +165,12 @@
     .button {
       float: right;
       padding-top: 10px;
+      @include bp-iphone-portrait {
+        margin-right: 40px;
+      }
+      @include bp-small {
+        margin-right: 20px;
+      }
       .icon-mobile {
         .icon-mobile-list {
           display: block;
