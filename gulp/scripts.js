@@ -61,7 +61,8 @@ gulp.task('scripts-white', function() {
   "./front/source/assets/javascripts/controllers/pageContent.controller.js",
   "./front/source/assets/javascripts/controllers/header.js",
   "./front/source/assets/javascripts/controllers/slider.js",
-  "./front/source/assets/javascripts/controllers/white/animations.js"])
+  "./front/source/assets/javascripts/controllers/white/animations.js",
+  "./front/source/assets/javascripts/controllers/white/search-animation.js"])
   .pipe(plugins.concat('scripts-white.js'))
   .pipe(plugins.uglify())
   .pipe(plugins.rename({ extname: '.min.js' }))

@@ -16,6 +16,13 @@ body {
   .loader {
   	@include generate-loader($img-loader);
   }
+  .overlay-search {
+  	@include generate-overlay();
+  	@include opacity(.95);
+    @include bp-small {
+      top:50px;
+    }
+  }
   #content-slider {
     height: 1000px;
     overflow: hidden;

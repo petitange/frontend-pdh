@@ -464,17 +464,6 @@
     position: relative;
     z-index: 999;
   }
-  .mcp-pushnew-menu {
-    &.menu-fixed {
-  		z-index: 10;
-  		position: fixed;
-  		left: 0;
-  		top: 0;
-  		width: 100%;
-  		background: #252525;
-  	}
-  }
-
   #mp-pusher {
     @include bp-medium {
       transform: translate3d(0px, 0px, 0px) !important;

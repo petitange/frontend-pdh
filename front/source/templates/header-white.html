@@ -11,6 +11,7 @@
 </head>
 <body ng-app="app"  class="background-body">
   <div class="loader"></div>
+  <div class="overlay-search"></div>
   <div id="header" class="content-header">
     <header>
       <div class="toolheader header-hight hidde-element-header">
@@ -34,8 +35,27 @@
           <form id="search" action="#" method="get">
             <div class="input-box">
               <input type="search" placeholder="Búsqueda por categoria, marca, artículos, etc..." name="q" value=""  maxlength="128" autocomplete="off"/>
+              <div class="close-search">
+                <i class="icon-close"></i>
+              </div>
               <div class="button search-button">
                 <i class="icon-mobile icon-search"></i>
+              </div>
+              <div class="content-suggestions">
+                <h2><span>SUGERENCIAS</span></h2>
+                <ul class="suggestions">
+                  <li> <a href="#"><span>Referencia 1<span></a></li>
+                  <li> <a href="#"><span>Referencia 1<span></a></li>
+                  <li> <a href="#"><span>Referencia 1<span></a></li>
+                  <li> <a href="#"><span>Referencia 1<span></a></li>
+                </ul>
+                <h2><span>MARCAS</span></h2>
+                <ul class="brands">
+                  <li><a href="#"><img src="img/tiffany-logo.svg" /></a></li>
+                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
+                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
+                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
+                </ul>
               </div>
             </div>
           </form>

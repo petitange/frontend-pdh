@@ -7,6 +7,13 @@
       height: 60px;
     }
   }
+  &.header-fixed {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 .hidde-element-header {
   @include bp-small {
