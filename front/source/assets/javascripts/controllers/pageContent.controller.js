@@ -14,7 +14,6 @@
       .then(
         // Success handler
         function (response) {
-          console.log(response.data);
           var entries = response.data;
           vm.fields = response.data.items[1].fields;
         },

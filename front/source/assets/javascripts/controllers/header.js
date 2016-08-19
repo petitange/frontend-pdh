@@ -11,6 +11,52 @@
 
     vm.menu = [
       {
+        label: 'Premium',
+        tag: 'Nuevo',
+        children: [
+          {
+            label: 'Julio',
+            children: []
+          },
+          {
+            label: 'Kiehl´s',
+            children: []
+          },
+          {
+            label: 'Justice',
+            children: []
+          },
+          {
+            label: 'Aristocracy',
+            children: []
+          },
+          {
+            label: 'Chester & Peck',
+            children: []
+          },
+          {
+            label: 'Coach',
+            children: []
+          },
+          {
+            label: 'Bose',
+            children: []
+          },
+          {
+            label: 'Marimeko',
+            children: []
+          },
+          {
+            label: 'Michael Kors',
+            children: []
+          },
+          {
+            label: 'Tou',
+            children: []
+          }
+        ]
+      },
+      {
         label: 'eBoutiques',
         children: [
           {
@@ -1210,57 +1256,6 @@
             ]
           },
           {
-            label: 'Carriolas',
-            children: [
-              {
-                label: 'Sencillas',
-                children: []
-              },
-              {
-                label: 'Accesorios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Autoasientos',
-            children: [
-              {
-                label: 'Autoasientos',
-                children: []
-              },
-              {
-                label: 'Boosters',
-                children: []
-              },
-              {
-                label: 'Accesorios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Artículos de Viaje',
-            children: [
-              {
-                label: 'Pañales',
-                children: []
-              },
-              {
-                label: 'Canguros y rebozos',
-                children: []
-              },
-              {
-                label: 'Cambiadores',
-                children: []
-              },
-              {
-                label: 'Varios y accesorios',
-                children: []
-              }
-            ]
-          },
-          {
             label: 'Alimentación',
             children: [
               {
@@ -1297,77 +1292,6 @@
               },
               {
                 label: 'Varios y accesorios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Seguridad',
-            children: [
-              {
-                label: 'Monitores',
-                children: []
-              },
-              {
-                label: 'Puertas y barandales',
-                children: []
-              },
-              {
-                label: 'Pantallas y espejos',
-                children: []
-              },
-              {
-                label: 'Varios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Muebles',
-            children: [
-              {
-                label: 'Cunas y camas',
-                children: []
-              },
-              {
-                label: 'Corrales',
-                children: []
-              },
-              {
-                label: 'Sillas altas',
-                children: []
-              },
-              {
-                label: 'Decoración',
-                children: []
-              },
-              {
-                label: 'Varios y accesorios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Blancos',
-            children: [
-              {
-                label: 'Set de cuna',
-                children: []
-              },
-              {
-                label: 'Cobijas',
-                children: []
-              },
-              {
-                label: 'Sábanas y protectores',
-                children: []
-              },
-              {
-                label: 'Edredones',
-                children: []
-              },
-              {
-                label: 'Almohadas',
                 children: []
               }
             ]
@@ -1423,6 +1347,31 @@
             ]
           },
           {
+            label: 'Muebles',
+            children: [
+              {
+                label: 'Cunas y camas',
+                children: []
+              },
+              {
+                label: 'Corrales',
+                children: []
+              },
+              {
+                label: 'Sillas altas',
+                children: []
+              },
+              {
+                label: 'Decoración',
+                children: []
+              },
+              {
+                label: 'Varios y accesorios',
+                children: []
+              }
+            ]
+          },
+          {
             label: 'Higiene y Salud',
             children: [
               {
@@ -1451,6 +1400,103 @@
               },
               {
                 label: 'Varios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Artículos de Viaje',
+            children: [
+              {
+                label: 'Pañales',
+                children: []
+              },
+              {
+                label: 'Canguros y rebozos',
+                children: []
+              },
+              {
+                label: 'Cambiadores',
+                children: []
+              },
+              {
+                label: 'Varios y accesorios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Carriolas',
+            children: [
+              {
+                label: 'Sencillas',
+                children: []
+              },
+              {
+                label: 'Accesorios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Blancos',
+            children: [
+              {
+                label: 'Set de cuna',
+                children: []
+              },
+              {
+                label: 'Cobijas',
+                children: []
+              },
+              {
+                label: 'Sábanas y protectores',
+                children: []
+              },
+              {
+                label: 'Edredones',
+                children: []
+              },
+              {
+                label: 'Almohadas',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Seguridad',
+            children: [
+              {
+                label: 'Monitores',
+                children: []
+              },
+              {
+                label: 'Puertas y barandales',
+                children: []
+              },
+              {
+                label: 'Pantallas y espejos',
+                children: []
+              },
+              {
+                label: 'Varios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Autoasientos',
+            children: [
+              {
+                label: 'Autoasientos',
+                children: []
+              },
+              {
+                label: 'Boosters',
+                children: []
+              },
+              {
+                label: 'Accesorios',
                 children: []
               }
             ]
@@ -1835,6 +1881,88 @@
             ]
           },
           {
+            label: 'Electrodomésticos',
+            children: [
+              {
+                label: 'Microondas',
+                children: []
+              },
+              {
+                label: 'Hornos y tostadores',
+                children: []
+              },
+              {
+                label: 'Cafeteras',
+                children: []
+              },
+              {
+                label: 'Licuadoras',
+                children: []
+              },
+              {
+                label: 'Bitacoras',
+                children: []
+              },
+              {
+                label: 'Extractores',
+                children: []
+              },
+              {
+                label: 'Procesadores',
+                children: []
+              },
+              {
+                label: 'Sandiwicheras',
+                children: []
+              },
+              {
+                label: 'Vaporeras',
+                children: []
+              },
+              {
+                label: 'Freidoras',
+                children: []
+              },
+              {
+                label: 'Planchas',
+                children: []
+              },
+              {
+                label: 'Aspiradoras',
+                children: []
+              },
+              {
+                label: 'Varios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Colchones',
+            children: [
+              {
+                label: 'Individual',
+                children: []
+              },
+              {
+                label: 'Matrimonial',
+                children: []
+              },
+              {
+                label: 'Queen Size',
+                children: []
+              },
+              {
+                label: 'King Size',
+                children: []
+              },
+              {
+                label: 'Almohadas y protectores',
+                children: []
+              }
+            ]
+          },
+          {
             label: 'Equipaje',
             children: [
               {
@@ -1962,88 +2090,6 @@
               },
               {
                 label: 'Accesorios',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Colchones',
-            children: [
-              {
-                label: 'Individual',
-                children: []
-              },
-              {
-                label: 'Matrimonial',
-                children: []
-              },
-              {
-                label: 'Queen Size',
-                children: []
-              },
-              {
-                label: 'King Size',
-                children: []
-              },
-              {
-                label: 'Almohadas y protectores',
-                children: []
-              }
-            ]
-          },
-          {
-            label: 'Electrodomésticos',
-            children: [
-              {
-                label: 'Microondas',
-                children: []
-              },
-              {
-                label: 'Hornos y tostadores',
-                children: []
-              },
-              {
-                label: 'Cafeteras',
-                children: []
-              },
-              {
-                label: 'Licuadoras',
-                children: []
-              },
-              {
-                label: 'Bitacoras',
-                children: []
-              },
-              {
-                label: 'Extractores',
-                children: []
-              },
-              {
-                label: 'Procesadores',
-                children: []
-              },
-              {
-                label: 'Sandiwicheras',
-                children: []
-              },
-              {
-                label: 'Vaporeras',
-                children: []
-              },
-              {
-                label: 'Freidoras',
-                children: []
-              },
-              {
-                label: 'Planchas',
-                children: []
-              },
-              {
-                label: 'Aspiradoras',
-                children: []
-              },
-              {
-                label: 'Varios',
                 children: []
               }
             ]
@@ -2214,209 +2260,204 @@
         ]
       },
       {
-        label: 'Juguetes y videojuegos',
+        label: 'Juguetes',
         children: [
           {
-            label: 'Juguetes',
+            label: 'Star Wars',
+            children: []
+          },
+          {
+            label: 'Muñecas',
+            children: []
+          },
+          {
+            label: 'Peluches',
+            children: []
+          },
+          {
+            label: 'Figuras acción',
+            children: []
+          },
+          {
+            label: 'Bicicletas',
+            children: []
+          },
+          {
+            label: 'Vehículos',
+            children: []
+          },
+          {
+            label: 'Electrónicos',
+            children: []
+          },
+          {
+            label: 'Construcción',
+            children: []
+          },
+          {
+            label: 'Juegos de mesa',
+            children: []
+          },
+          {
+            label: 'Aprendizaje/educativo',
+            children: []
+          },
+          {
+            label: 'Preescolar',
+            children: []
+          },
+          {
+            label: 'Manualidades',
+            children: []
+          },
+          {
+            label: 'Exterior y deportivo',
+            children: []
+          }
+        ]
+      },
+      {
+        label: 'Videojuegos',
+        children: [
+          {
+            label: 'PS4',
             children: [
               {
-                label: 'Star Wars',
+                label: 'Accesorios',
                 children: []
               },
               {
-                label: 'Muñecas',
+                label: 'Consolas',
                 children: []
               },
               {
-                label: 'Peluches',
-                children: []
-              },
-              {
-                label: 'Figuras acción',
-                children: []
-              },
-              {
-                label: 'Bicicletas',
-                children: []
-              },
-              {
-                label: 'Vehículos',
-                children: []
-              },
-              {
-                label: 'Electrónicos',
-                children: []
-              },
-              {
-                label: 'Construcción',
-                children: []
-              },
-              {
-                label: 'Juegos de mesa',
-                children: []
-              },
-              {
-                label: 'Aprendizaje/educativo',
-                children: []
-              },
-              {
-                label: 'Preescolar',
-                children: []
-              },
-              {
-                label: 'Manualidades',
-                children: []
-              },
-              {
-                label: 'Exterior y deportivo',
+                label: 'Juegos',
                 children: []
               }
             ]
           },
           {
-            label: 'Videojuegos',
+            label: 'WII U',
             children: [
               {
-                label: 'PS4',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
+                label: 'Accesorios',
+                children: []
               },
               {
-                label: 'WII U',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
+                label: 'Consolas',
+                children: []
               },
               {
-                label: 'XBOX ONE',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: 'PS3',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: 'WII',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: 'XBOX 360',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: 'PSVITA',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: '3DS',
-                children: [
-                  {
-                    label: 'Accesorios',
-                    children: []
-                  },
-                  {
-                    label: 'Consolas',
-                    children: []
-                  },
-                  {
-                    label: 'Juegos',
-                    children: []
-                  }
-                ]
-              },
-              {
-                label: 'Otros',
+                label: 'Juegos',
                 children: []
               }
             ]
+          },
+          {
+            label: 'XBOX ONE',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'PS3',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'WII',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'XBOX 360',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'PSVITA',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: '3DS',
+            children: [
+              {
+                label: 'Accesorios',
+                children: []
+              },
+              {
+                label: 'Consolas',
+                children: []
+              },
+              {
+                label: 'Juegos',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Otros',
+            children: []
           }
         ]
       }

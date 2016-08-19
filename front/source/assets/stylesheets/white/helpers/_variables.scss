@@ -22,23 +22,32 @@ $color-black:                        #333333;
 $color-dark-grey:                    #666666;
 $color-golden-yellow:                #ffc425;
 $color-grey:                         #999999;
-$color-green:                        #20bc66;
+$color-green:                        #68B211;
 $color-ligth-grey:                   #f0f0f0;
 $color-white:                        #ffffff;
-//images
-$img-loader:                         '../img/page-loader.gif';
 
+//loader
+$size : 120px;
+$first-color-loader : $color-golden-yellow;
+$second-color-loader: $color-white;
+
+//animations image
+$maxWidth: 198px;
+$minWidth: 115px;
+
+//images
+$logos: '../img/sprite-logos.svg';
 //backgrounds
 $background-color-black:             $color-black;
 $background-color-grey:              $color-grey;
-$background-color-ligth-grey:              $color-ligth-grey;
+$background-color-ligth-grey:        $color-ligth-grey;
 $background-color-golden-yellow:     $color-golden-yellow;
 $background-color-white:             $color-white;
 
 //border
 $border-width-1px:                   1px;
 $border-style-solid:                 solid;
-$margin-top-menu:                    -24px;
+$margin-top-menu:                    -50px;
 $menu-elements:                      12;
 
 //slider

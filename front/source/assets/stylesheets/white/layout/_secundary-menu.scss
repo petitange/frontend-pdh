@@ -10,10 +10,10 @@
 
 #content-secundary-menu {
   right: -205px;
-  width: 580px;
+  width: 620px;
   @include bp-large {
     right: -25px;
-    width: 580px;
+    width: 620px;
   }
   @include bp-small {
     width: 100%;
@@ -33,6 +33,7 @@
       margin: 25px 10px;
     }
     li {
+      @include over-link($color-black);
       @include bp-medium {
         display: inline-table;
       }
@@ -57,6 +58,7 @@
 
 #content-account-links {
   right: -325px;
+  @include over-link($color-green);
   @include bp-large {
     right: -180px;
     width: 112px;
@@ -64,6 +66,7 @@
     text-align: center;
   }
   @include bp-small {
+    @include over-link($color-black);
     right: 0px;
     height: 42px;
     text-decoration: none;
@@ -89,6 +92,7 @@
       color: #666666;
       font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       letter-spacing: 0.4px;
+      text-decoration: none;
     }
     &:hover {
       @include bp-small {

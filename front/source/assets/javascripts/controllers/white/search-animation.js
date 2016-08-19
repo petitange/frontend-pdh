@@ -14,7 +14,7 @@ $('#search input' ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
   }
-  $('#search .content-suggestions').slideUp('medium');
+  $('#search .content-suggestions').css('display', 'block');
 });
 
 $('#search .close-search').click(function () {
@@ -36,9 +36,12 @@ function closeSearch() {
 }
 
 function openSearch() {
-  nav.removeClass('header-fixed');
+  var widthScreen = getWidthScreen();
+  if(widthScreen > mobileBreakPoint) {
+    nav.removeClass('header-fixed');
+    $('body').css('overflow', 'hidden');
+  }
   scrolled = false;
-  $('body').css('overflow', 'hidden');
   $('#search').addClass('search-overlay');
   $('body .overlay-search').css('display', 'block');
   $('#search .close-search').css('display', 'block');

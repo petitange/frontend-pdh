@@ -10,13 +10,19 @@
 <link href="css/sass-white.min.css" rel="stylesheet" />
 </head>
 <body ng-app="app"  class="background-body">
-  <div class="loader"></div>
+  <div class="load">
+    <div class="dot"></div>
+    <div class="outline"><span></span></div>
+  </div>
   <div class="overlay-search"></div>
   <div id="header" class="content-header">
     <header>
       <div class="gr-12 gr-12@tablet gr-12@mobile" id="secundary-menu">
         <div class="toolheader header-hight hidde-element-header">
-
+          <div class="logo-ph">
+          </div>
+          <div class="logo-cp">
+          </div>
         </div>
       </div>
       <div class="toolheader animated-logo">
@@ -36,7 +42,7 @@
           <!-- Search -->
           <form id="search" action="#" method="get">
             <div class="input-box">
-              <input type="search" placeholder="Búsqueda por categoria, marca, artículos, etc..." name="q" value=""  maxlength="128" autocomplete="off"/>
+              <input type="input" placeholder="Búsqueda por categoria, marca, artículos, etc..." name="q" value=""  maxlength="128" autocomplete="off"/>
               <div class="close-search">
                 <i class="icon-close"></i>
               </div>
@@ -46,17 +52,19 @@
               <div class="content-suggestions">
                 <h2><span>SUGERENCIAS</span></h2>
                 <ul class="suggestions">
-                  <li> <a href="#"><span>Referencia 1<span></a></li>
-                  <li> <a href="#"><span>Referencia 1<span></a></li>
-                  <li> <a href="#"><span>Referencia 1<span></a></li>
-                  <li> <a href="#"><span>Referencia 1<span></a></li>
+                  <li> <a href="#"><span>Referencia 1</span></a></li>
+                  <li> <a href="#"><span>Referencia 1</span></a></li>
+                  <li> <a href="#"><span>Referencia 1</span></a></li>
+                  <li> <a href="#"><span>Referencia 1</span></a></li>
                 </ul>
                 <h2><span>MARCAS</span></h2>
                 <ul class="brands">
-                  <li><a href="#"><img src="img/tiffany-logo.svg" /></a></li>
-                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
-                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
-                  <li> <a href="#"><img src="img/tiffany-logo.svg" /></a></li>
+                  <li><a href="#"><img src="img/burberry.png" /></a></li>
+                  <li><a href="#"><img src="img/samsung.png" /></a></li>
+                  <li><a href="#"><img src="img/burberry.png" /></a></li>
+                  <li><a href="#"><img src="img/samsung.png" /></a></li>
+                  <li><a href="#"><img src="img/burberry.png" /></a></li>
+                  <li><a href="#"><img src="img/samsung.png" /></a></li>
                 </ul>
               </div>
             </div>
@@ -80,7 +88,6 @@
                               <span>Departamentos</span>
                           </a>
                           <div class="grid-container3">
-                            <span class="arrow-bottom"></span>
                             <div class="grid-column grid-column3 mp-level" ng-controller="headerCtrl as vm">
                               <a class="mp-back" href="#"><i class="icon-left"></i>
                                 <span>Departamentos</span>
@@ -88,8 +95,8 @@
                               <ul class="level1">
                                 <li ng-repeat="item in vm.menu" class="autosub-item level1-{{$index + 1}}">
                                     <a title="{{item.label}}" href="#" target="_self">
-                                      <i class="icon-left"></i>
                                       <span>{{item.label}}</span>
+                                      <tag ng-if="item.tag" class="tag" >{{item.tag}}</tag>
                                     </a>
                                     <div ng-if="item.children.length > 0" class="grid-container5">
                                       <div class="content-sub-menu">
@@ -100,7 +107,6 @@
                                           <ul ng-if="subMenu.children" class="level2">
                                             <li ng-repeat="subLevel in subMenu.children">
                                               <a title="{{subLevel.label}}" href="#" target="_self">
-                                                <i class="icon-sale"></i>
                                                 <span>{{subLevel.label}}</span>
                                               </a>
                                             </li>
@@ -108,7 +114,26 @@
                                         </div>
                                       </div>
                                       <div class="banner-right">
-                                        <img src="img/banners.png" alt="banner" />
+                                        <a title="CASA Y ESTILO" href="#" target="_self">
+                                          <span>CASA Y ESTILO</span>
+                                        </a>
+                                        <p class="title">
+                                          Lorem Ipsum is
+                                          simply dummy
+                                          text of the
+                                          printing and
+                                          typesetting
+                                          industry.
+                                        </p>
+                                        <p class="summary">
+                                          Neque porro quisquam est
+                                          qui dolorem ipsum quia dolor
+                                          sit amet, consectetur, adipisci
+                                        </p>
+                                        <a class="link-catalog" title="ver catálogo" href="#" target="_self">
+                                          <span>VER CATÁLOGO</span>
+                                        </a>
+                                        <img src="img/LAMPARA.png" alt="banner" />
                                       </div>
                                     </div>
                                 </li>
@@ -147,7 +172,7 @@
                         </li>
                         <li>
                           <a href="#">
-                            <span>Publicaciones</span>
+                            <span>Publicaciones Palacio</span>
                           </a>
                         </li>
                         <li>
@@ -165,7 +190,7 @@
                     <!-- End Secundary Menu -->
                     <!-- Account -->
                     <div id="content-account-links" class="content-float">
-                      <a href="#">INICIA SESIÓN</a>
+                      <a href="#"><span>INICIA SESIÓN</span></a>
                     </div>
                     <!-- End Account -->
                   </div>
@@ -177,9 +202,6 @@
         <div class="gr-2 gr-1@tablet gr-1@mobile header-hight">
           <!-- Car -->
           <div id="header-minicart-container" class="header-minicart active">
-            <div id="circle-border" class="circle">
-              <div id="circle-small" class="circle"></div>
-            </div>
             <span>3</span>
           </div>
           <div class="car-price-detail flip-container vertical" ontouchstart="this.classList.toggle('hover');">

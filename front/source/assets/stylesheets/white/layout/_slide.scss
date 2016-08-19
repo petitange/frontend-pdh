@@ -16,9 +16,7 @@
 .flex-viewport {
   max-height: $flex-viewport-max-height;
   .loading &{
-
     max-height: $flex-viewport-loading-max-height;
-
   }
 }
 

@@ -1,0 +1,177 @@
+.load {
+   @include generate-overlay();
+   &:before,
+   &:after,
+   .dot,
+   .outline {
+     position: absolute;
+     top: 50%;
+     z-index: 10px;
+     left: 50%;
+     @include transform(translate(-50%,-50%));
+     border-radius:50%;
+   }
+   .dot {
+     width: #{$size - $size / 100 * 20};
+     height: #{$size - $size / 100 * 20};
+     background: $second-color-loader;
+     @include animation(in 4s linear infinite);
+     z-index:2;
+   }
+   &:before {
+     content: "";
+     width: 0px;
+     height: 0px;
+     background: $first-color-loader;
+     @include animation(out1 4s linear infinite);
+   }
+   &:after {
+     content: "";
+     width: 0px;
+     height: 0px;
+     background: $second-color-loader;
+     @include animation(out2 4s linear infinite);
+   }
+   .outline {
+      width: $size;
+      height: $size;
+      z-index:2;
+      span {
+         width: $size / 2 + 8;
+         height: $size / 2 + 8;
+         @include transform-origin(100% 100%);
+         @include transform(rotate(45deg) skewX(80deg));
+         overflow: hidden;
+         position: absolute;
+         bottom: 50%;
+         right: 50%;
+         @include animation(outline 4s linear infinite);
+         &:before{
+            content: "";
+            display: block;
+            border: solid 5px $second-color-loader;
+            width: 200%;
+            height: 200%;
+            border-radius: 50%;
+            @include transform(skewX(-80deg));
+            @include animation(outlineBefore 4s linear infinite);
+         }
+      }
+   }
+}
+
+@include keyframes(outline){
+ 0%{
+    @include transform(rotate(0deg) skewX(80deg));
+ }
+ 25%{
+    @include transform(rotate(500deg) skewX(15deg));
+ }
+ 50%{
+    @include transform(rotate(1000deg) skewX(40deg));
+ }
+ 75%{
+    @include transform(rotate(1500deg) skewX(60deg));
+ }
+ 100%{
+    @include transform(rotate(2160deg) skewX(80deg));
+ }
+}
+
+@include keyframes(outlineBefore) {
+ 0%{
+    @include transform(skewX(-80deg));
+    border: solid 5px $second-color-loader;
+ }
+ 25%{
+    @include transform(skewX(-15deg));
+    border: solid 5px $second-color-loader;
+ }
+ 49%{
+    border: solid 5px $second-color-loader;
+ }
+ 50%{
+    @include transform(skewX(-40deg));
+    border: solid 5px $first-color-loader;
+ }
+ 75%{
+    @include transform(skewX(-60deg));
+    border: solid 5px $first-color-loader;
+ }
+ 100%{
+    @include transform(skewX(-80deg));
+    border: solid 5px $first-color-loader;
+ }
+}
+
+@include keyframes(in){
+ 0%{
+    width: #{$size + $size / 100 * 20};
+    height: #{$size + $size / 100 * 20};
+    background:$second-color-loader;
+ }
+ 40%{
+    width: 0px;
+    height: 0px;
+    background:$second-color-loader;
+ }
+ 41%{
+    width: 0px;
+    height: 0px;
+    background:$first-color-loader;
+ }
+ 50%{
+    width: #{$size + $size / 100 * 20};
+    height: #{$size + $size / 100 * 20};
+    background:$first-color-loader;
+ }
+ 90%{
+    width: 0px;
+    height: 0px;
+    background:$first-color-loader;
+ }
+ 91%{
+    width: 0px;
+    height: 0px;
+    background:$second-color-loader;
+ }
+ 100%{
+    width: #{$size + $size / 100 * 20};
+    height: #{$size + $size / 100 * 20};
+    background:$second-color-loader;
+ }
+}
+
+@include keyframes(out1){
+ 0%{
+    width:0px;
+    height:0px;
+ }
+ 30%{
+    width:120vw;
+    height:120vw;
+ }
+ 100%{
+    width:120vw;
+    height:120vw;
+ }
+}
+
+@include keyframes(out2){
+ 0%{
+    width:0px;
+    height:0px;
+ }
+ 30%{
+    width:0px;
+    height:0px;
+ }
+ 60%{
+    width:120vw;
+    height:120vw;
+ }
+ 100%{
+    width:120vw;
+    height:120vw;
+ }
+}

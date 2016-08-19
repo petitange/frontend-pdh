@@ -1,10 +1,43 @@
 #header {
   background-color: $background-color-white;
+  @include bp-small {
+    height: 50px;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0 !important;
+    width: 100%;
+  }
   .content-header {
     height: 100%;
     width: 100%;
+  }
+  #secundary-menu {
+    border-bottom: 1px solid $color-ligth-grey;
     @include bp-small {
-      height: 60px;
+      display: none;
+    }
+    .toolheader {
+      div {
+        display: block;
+        background: url($logos) no-repeat;
+        float: left;
+        background-size: 100px 50px;
+        margin: 5px 5px 0px 0px;
+        cursor: pointer;
+
+      }
+      .logo-ph {
+        background-position: -70px -5px;
+        @include overIconButton($background-color-black);
+        &:hover {
+          background-position: -30px -5px;
+        }
+      }
+      .logo-cp {
+        @include overIconButton($background-color-ligth-grey);
+        background-position: 10px -5px;
+      }
     }
   }
   &.header-fixed {
@@ -16,22 +49,36 @@
     .toolheader {
       height: 50px;
     }
+    .car-price-detail {
+      @include bp-medium-screens {
+        display: none;
+      }
+    }
     .logo {
       margin-top: 0px;
-      img {
-        max-width: 115px;
+      @include bp-small {
         margin-top: 10px;
+      }
+      img {
+        @include bp-medium {
+          @include transform(scale(0.8, 0.8));
+        }
       }
     }
     #secundary-menu {
-      border-bottom: 1px solid $color-ligth-grey;
+      @include bp-small {
+        display: none;
+      }
     }
     #toolbar-search {
       position: absolute;
       width: 1200px;
+      @include bp-medium-screens {
+        transition: all 0.5s ease-in-out;
+      }
       @include bp-small {
         position: relative;
-        width: 20%;
+        width: 33%;
       }
       @include bp-medium-screens {
         width: 100%;
@@ -40,11 +87,16 @@
         &.search-overlay {
           input {
             display: block;
+            @include bp-small {
+              width: 80%;
+            }
           }
         }
         .button {
-          padding-top: 5px;
-          margin-right: 15%;
+          margin-right: 17%;
+          @include bp-small {
+            margin-right: 40%;
+          }
           @include bp-medium-screens {
             margin-right: 18%;
           }
@@ -85,12 +137,6 @@
   }
 }
 
-.banner-right {
-  @include bp-large {
-    display: none
-  }
-}
-
 .header-hight {
   height: 50px;
   position: relative;
@@ -105,6 +151,7 @@
   }
   img {
     max-width: 193px;
+    transition: all 0.5s ease-in-out;
     @include bp-large {
       max-width: 145px;
     }
@@ -112,4 +159,11 @@
       max-width: 112px;
     }
   }
+}
+
+@keyframes resizeImage {
+    0%   {max-width: $maxWidth}
+    25%  {max-width: $maxWidth - (($maxWidth - $minWidth) / 2) }
+    50%  {max-width: $maxWidth - (($maxWidth - $minWidth) / 4) }
+    100% {max-width: $minWidth}
 }
