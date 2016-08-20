@@ -80,8 +80,8 @@
         margin-left: -55%;
       }
       .button {
-        @include bp-iphone-portrait {
-          margin: -27% 9%;
+        @include bp-small {
+            margin: -87px 39px;
         }
         @include bp-medium {
           @include overIconButton($background-color-ligth-grey);
@@ -108,6 +108,9 @@
       outline: none;
       background: none;
       border: none;
+      @include bp-medium-screens {
+        width: 88%;
+      }
       @include bp-small {
         display: none;
       }
@@ -189,7 +192,7 @@
         @include overIconButton($background-color-ligth-grey);
       }
       @include bp-small {
-        margin: 0% 40%;
+        margin: 0px 30px;
       }
       .icon-mobile {
         .icon-mobile-list {

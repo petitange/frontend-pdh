@@ -49,6 +49,11 @@
     .toolheader {
       height: 50px;
     }
+    .mcp-wrapper {
+      @include bp-medium-screens {
+        width: 98%;
+      }
+    }
     .car-price-detail {
       @include bp-medium-screens {
         display: none;
@@ -91,11 +96,16 @@
               width: 80%;
             }
           }
+          .button {
+            @include bp-small {
+              margin: -87px 30px;
+            }
+          }
         }
         .button {
           margin-right: 17%;
           @include bp-small {
-            margin-right: 40%;
+            margin: 0px 30px;
           }
           @include bp-medium-screens {
             margin-right: 18%;
