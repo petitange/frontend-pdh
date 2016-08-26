@@ -96,6 +96,7 @@
     }
     &:hover {
       @include bp-small {
+        font-family: $font-gotham-book, $font-secondary;
         text-decoration: none;
       }
     }

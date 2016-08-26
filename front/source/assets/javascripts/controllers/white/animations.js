@@ -11,16 +11,13 @@ $(document).ready(function () {
   var widthScreen = getWidthScreen ();
   getSizeMenu(widthScreen);
   groupSubMenu(columnWidth);
-  getAnimations();
 });
 
 $(window).load(function () {
   $('.overlay-search').fadeOut('slow');
   setTimeout(function() {
     $('.load').fadeOut('slow', function () {
-
       $('#header').removeClass('animated-element');
-      $('#content-slider').removeClass('animated-element');
     });
   }, 2000);
 });
@@ -107,12 +104,4 @@ function groupSubMenu(columnWidth) {
     itemSelector: '.sub-menu',
     columnWidth: columnWidth
   });
-}
-
-function getAnimations() {
-  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-/*  $('.animated-header').addClass('animated slideInDown').one(animationEnd, function () {
-    $('.aanimated-header').removeClass('animated slideInDown');
-  });
-  */
 }

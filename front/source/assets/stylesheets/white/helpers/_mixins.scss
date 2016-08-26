@@ -130,8 +130,6 @@
   }
   &:hover {
     & > a {
-
-      font-family: $font-gotham-bold, $font-secondary;
       background: none;
       span {
         color: $color;
@@ -144,7 +142,6 @@
   &.current {
     & > a {
       background: none;
-      font-family: $font-gotham-bold, $font-secondary;
       span {
         color: $color;
         &:after {

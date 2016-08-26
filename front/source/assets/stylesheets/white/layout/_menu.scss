@@ -325,18 +325,30 @@
       @include bp-medium {
         height: 50px;
         &:nth-child(1){
+          background-color: $background-color-white;
+          a {
+            background: none;
+            span {
+              color: $color-black;
+              &:after {
+                width: 50%;
+              }
+            }
+          }
           .grid-container5 {
             left: 100%;
             @include opacity(1);
           }
         }
         &:hover {
-          & > a span {
-            color: $color-black;
-        		font-weight: bold;
-        		background: none;
-            border: none;
-            width: 0px;
+          & > a {
+            span {
+              color: $color-black;
+          		font-weight: bold;
+          		background: none;
+              border: none;
+              width: 0px;
+            }
           }
         }
         &.current {

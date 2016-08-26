@@ -3,14 +3,14 @@
   position: absolute;
   top : 0;
   bottom : 0;
-  left : 0;
+  left: -10px;
   right : 0;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   margin: auto;
   overflow: hidden;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
@@ -19,7 +19,7 @@
   content: '';
   position: absolute;
   margin: auto;
-  left: 0;
+  left: -10px;
   top: 0;
   bottom: 0;
   right: 0;
@@ -34,8 +34,8 @@
   z-index: 999;
   width: 3px;
   height: 3px;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   -webkit-animation: sonar 1.5s infinite linear;
@@ -46,32 +46,32 @@
 
 @keyframes sonar {
   from {
-    width: 1px;
-    height: 1px;
-  }
-  to {
     width: 40px;
     height: 40px;
+  }
+  to {
+    width: 60px;
+    height: 60px;
   }
 }
 @-moz-keyframes sonar {
   from {
-    width: 1px;
-    height: 1px;
-  }
-  to {
     width: 40px;
     height: 40px;
+  }
+  to {
+    width: 60px;
+    height: 60px;
   }
 }
 @-webkit-keyframes sonar {
   from {
-    width: 1px;
-    height: 1px;
-  }
-  to {
     width: 40px;
     height: 40px;
+  }
+  to {
+    width: 60px;
+    height: 60px;
   }
 }
 @-moz-keyframes dot_pulse {

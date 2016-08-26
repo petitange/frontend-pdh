@@ -107,7 +107,7 @@
       }
     }
     input {
-      width: 90%;
+      width: 88%;
       height: 35px;
       color: $color-black;
       font-size: 12px;
@@ -124,13 +124,17 @@
       }
     }
     .content-suggestions {
-      display: none;
+      @include opacity(1);
       position: absolute;
       width: 100%;
       height: 50px;
       margin-top: 30px;
+      @include transition(0.8s);
       @include bp-small {
         margin-top: 55px;
+      }
+      &.animated-element {
+        @include opacity(0);
       }
       h2 {
         font-size: 12px;
@@ -198,6 +202,7 @@
       float: right;
       position:relative;
       @include bp-medium {
+        margin-right: 10px;
         @include overIconButton($background-color-ligth-grey);
         background-image: url($sprite-icons);
         background-position: 5px -25px;

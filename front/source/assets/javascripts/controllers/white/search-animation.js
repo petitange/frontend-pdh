@@ -4,17 +4,15 @@ $('.search-button').click(function () {
   openSearch()
 });
 
-
 $('#search input').focus(function () {
   openSearch();
 });
-
 
 $('#search input' ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
   }
-  $('#search .content-suggestions').show('slow');
+  $('#search .content-suggestions').removeClass('animated-element');
 });
 
 $('#search .close-search').click(function () {
@@ -31,7 +29,7 @@ function closeSearch() {
   $('body .overlay-search').css('display', 'none');
   $('#toolbar-search #search.search-overlay').removeAttr('style');
   $('#search').removeClass('search-overlay');
-  $('#search .content-suggestions').css('display', 'none');
+  $('#search .content-suggestions').addClass('animated-element');
   $('#search .close-search').css('display', 'none');
 }
 
@@ -64,7 +62,7 @@ for (i = 0; i < peopleCount; i++) {
 
 (function radar(){
 
-    var radius = 20;
+    var radius = 40;
     for (i = 0; i < peoples.length; i++) {
         var disX = 90 < peoples[i].angle + 90 < 270 ? radius - peoples[i].distance : radius,
             disY = 180 < peoples[i].angle + 90 < 360 ? radius - peoples[i].distance : radius,

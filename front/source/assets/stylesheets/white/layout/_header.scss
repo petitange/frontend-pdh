@@ -1,7 +1,8 @@
 #header {
   background-color: $background-color-white;
+  border-bottom: 1px solid $color-ligth-grey;
   @include opacity(1);
-  @include transition(0.8s);
+  @include transition(1.5s);
   @include bp-small {
     height: 50px;
     z-index: 10;
