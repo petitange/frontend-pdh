@@ -1,4 +1,4 @@
-var mobileBreakPoint = 1023,
+var mobileBreakPoint = 1025,
     menu = new mlPushMenu(document.getElementById('menu-group-1'), document.getElementById('trigger-18'), {
       type: 'overlap'
     }),
@@ -17,7 +17,11 @@ $(document).ready(function () {
 $(window).load(function () {
   $('.overlay-search').fadeOut('slow');
   setTimeout(function() {
-    $('.load').fadeOut('slow');
+    $('.load').fadeOut('slow', function () {
+
+      $('#header').removeClass('animated-element');
+      $('#content-slider').removeClass('animated-element');
+    });
   }, 2000);
 });
 
@@ -107,7 +111,8 @@ function groupSubMenu(columnWidth) {
 
 function getAnimations() {
   var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('.animated-logo').addClass('animated slideInDown').one(animationEnd, function () {
-    $('.animated-logo').removeClass('animated slideInDown');
+/*  $('.animated-header').addClass('animated slideInDown').one(animationEnd, function () {
+    $('.aanimated-header').removeClass('animated slideInDown');
   });
+  */
 }

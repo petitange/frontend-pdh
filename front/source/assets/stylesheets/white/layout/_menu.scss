@@ -215,9 +215,15 @@
       }
     }
     &:hover {
+      a {
+        span {
+          font-family: $font-gotham-book;
+        }
+      }
       & > div {
       	left: 0;
         opacity: 1;
+        @include transition(opacity 1s);
       	-webkit-transform: translate(0, 0);
         @include bp-small {
           left: -100%;
@@ -394,7 +400,7 @@
         }
         span {
           @include bp-medium {
-            color: $color-grey;
+            color: $color-grey !important;
           }
         }
         i {

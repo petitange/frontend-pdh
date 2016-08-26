@@ -7,7 +7,7 @@
     border-bottom: none;
   }
   i {
-    font-size: 16px;
+    font-size: 0px;
     margin: 13px 13px;
     display: block;
     color: $color-dark-grey;
@@ -46,22 +46,27 @@
     .close-search {
       margin-bottom: 5px;
       display: none;
-      @include overIconButton($background-color-black);
+      @include overIconButton($background-color-ligth-grey);
       cursor: pointer;
       float: right;
+      background-image: url($sprite-icons);
+      background-position: 5px -55px;
+      background-size: 100px 60px;
       @include bp-small {
         background: none;
+        background-image: none;
       }
       &:hover {
-        i {
-          color: $color-white;
-        }
+        background-position: -62px -55px;
       }
       i {
         font-size: 10px;
         margin: 15px 0px 0px 16px;
         display: block;
         color: $color-black;
+        @include bp-medium {
+          font-size: 0px;
+        }
       }
     }
     &.search-overlay {
@@ -85,6 +90,9 @@
         }
         @include bp-medium {
           @include overIconButton($background-color-ligth-grey);
+          #sonar {
+            display: block;
+          }
         }
       }
       input {
@@ -188,11 +196,21 @@
     }
     .button {
       float: right;
+      position:relative;
       @include bp-medium {
         @include overIconButton($background-color-ligth-grey);
+        background-image: url($sprite-icons);
+        background-position: 5px -25px;
+        background-size: 100px 60px;
+        &:hover {
+          background-position: -62px -25px;
+        }
       }
       @include bp-small {
         margin: 0px 30px;
+      }
+      #sonar {
+        display: none;
       }
       .icon-mobile {
         .icon-mobile-list {

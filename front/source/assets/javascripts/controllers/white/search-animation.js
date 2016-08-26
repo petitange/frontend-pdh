@@ -14,7 +14,7 @@ $('#search input' ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
   }
-  $('#search .content-suggestions').css('display', 'block');
+  $('#search .content-suggestions').show('slow');
 });
 
 $('#search .close-search').click(function () {
@@ -47,3 +47,31 @@ function openSearch() {
   $('#search .close-search').css('display', 'block');
   $('#search input').focus();
 }
+
+/**
+ * Created by PavelCSS on 13.01.15.
+ */
+var time = 1,
+    peopleCount = 1,
+    peoples = [];
+
+for (i = 0; i < peopleCount; i++) {
+    peoples.push({
+        distance : Math.floor((Math.random() * 140) + 1),
+        angle    : Math.floor((Math.random() * 360) + 1)
+    });
+}
+
+(function radar(){
+
+    var radius = 20;
+    for (i = 0; i < peoples.length; i++) {
+        var disX = 90 < peoples[i].angle + 90 < 270 ? radius - peoples[i].distance : radius,
+            disY = 180 < peoples[i].angle + 90 < 360 ? radius - peoples[i].distance : radius,
+            angleNew = (peoples[i].angle + 90) * Math.PI / 180,
+            getDegX = disX + peoples[i].distance - Math.round(peoples[i].distance * Math.cos(angleNew)),
+            getDegY = disY + peoples[i].distance - Math.round(peoples[i].distance * Math.sin(angleNew)),
+            delay = time / radius * (peoples[i].distance + 5);
+      $("#sonar").addClass('animated');
+    }
+})();

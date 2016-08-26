@@ -4,45 +4,64 @@
     display: none;
   }
 }
-
-#header-minicart-container {
-  float: right;
-  color: $color-black;
-  width: 50px;
-  height: 50px;
-  @include bp-small {
-    padding-top: 5px;
-  }
-  &.active {
-    span {
-      background-position: 0px 0px;
+#cart-container {
+  cursor: pointer;
+  &:hover {
+    & > .flip-container {
+      & > .flipper {
+        float: left;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: .5s;
+        -webkit-transform: perspective(500) rotateX(90deg) translateY(-25px) translateZ(25px);
+        .back {
+          background-color: $color-golden-yellow;
+          color: $color-black;
+        }
+      }
     }
   }
-  &.car-fixed {
-		position: fixed;
-		right: 0;
-		top: -9px;
-		border: none !important;
-		z-index: 9999;
-	}
-  span {
-    padding-top: 18px;
-    text-align: center;
-    z-index: 5;
-    display: block;
-    height: 30px;
+  #header-minicart-container {
+    float: right;
+    color: $color-black;
     width: 50px;
-    position: absolute;
-    font-size: 12px;
-    font-family: $font-gotham-medium;
-    background: url('../img/bag.svg') no-repeat 0px 0px;
-    background-size: 50px 40px;
+    height: 50px;
     @include bp-small {
+      padding-top: 5px;
+    }
+    &.active {
+      span {
+        background-position: 0px 0px;
+        &:hover {
 
+        }
+      }
+    }
+    &.car-fixed {
+  		position: fixed;
+  		right: 0;
+  		top: -9px;
+  		border: none !important;
+  		z-index: 9999;
+  	}
+    span {
+      padding-top: 18px;
+      text-align: center;
+      z-index: 5;
+      display: block;
+      height: 30px;
+      width: 50px;
+      position: absolute;
+      font-size: 12px;
+      font-family: $font-gotham-medium;
+      background: url('../img/bag.svg') no-repeat 0px 0px;
+      background-size: 50px 40px;
+      @include bp-small {
+
+      }
     }
   }
 }
-
 .flipper {
   float: left;
   width: 100%;
