@@ -124,17 +124,13 @@
       }
     }
     .content-suggestions {
-      @include opacity(1);
       position: absolute;
       width: 100%;
-      height: 50px;
+      height: 400px;
       margin-top: 30px;
-      @include transition(0.8s);
+      display: none;
       @include bp-small {
         margin-top: 55px;
-      }
-      &.animated-element {
-        @include opacity(0);
       }
       h2 {
         font-size: 12px;

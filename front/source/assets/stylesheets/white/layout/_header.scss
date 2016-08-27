@@ -2,7 +2,7 @@
   background-color: $background-color-white;
   border-bottom: 1px solid $color-ligth-grey;
   @include opacity(1);
-  @include transition(1.5s);
+  @include transition(0.8s);
   @include bp-small {
     height: 50px;
     z-index: 10;
@@ -57,6 +57,7 @@
     width: 100%;
     .toolheader {
       height: 50px;
+      position: relative;
     }
     .mcp-wrapper {
       @include bp-medium-screens {
@@ -84,14 +85,43 @@
         display: none;
       }
     }
+    &.sticky {
+      .logo {
+        img {
+          @include bp-medium {
+            margin-top: 35px;
+            //@include transform(scale(1, 1));
+          }
+        }
+      }
+      #toolbar-search {
+        @include bp-medium {
+          position: relative;
+          width: 66%;
+        }
+        #search {
+          input {
+            @include bp-medium {
+              display: block;
+              float: left;
+            }
+          }
+          .button {
+            @include bp-medium {
+              margin-right: 0%;
+            }
+          }
+        }
+      }
+      #empty-space {
+        display: block;
+      }
+    }
     #toolbar-search {
       position: absolute;
-      width: 1200px;
+      width: 100%;
+      right: 0;
       border-bottom: none;
-      @include transition(0.5s);
-      @include bp-medium-screens {
-        @include transition(all 0.5s ease-in-out);
-      }
       @include bp-small {
         position: relative;
         width: 33%;
@@ -114,7 +144,7 @@
           }
         }
         .button {
-          margin-right: 17%;
+          margin-right: 17.4%;
           @include bp-small {
             margin: 0px 30px;
           }
@@ -127,14 +157,12 @@
         }
       }
     }
-    .mcp-pushnew-menu {
-      .content-float {
-        @include bp-medium {
-          top: -40px;
-        }
-      }
-    }
     #empty-space {
+      display: none;
+    }
+  }
+  #empty-space {
+    @include bp-small {
       display: none;
     }
   }

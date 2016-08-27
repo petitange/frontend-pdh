@@ -38,9 +38,10 @@ $(window).scroll(function () {
 
   if (positionScroll > 100 && scrolled) {
     if (lastPositionScroll > positionScroll) {
-      $('#header.header-fixed  #secundary-menu').css('display', 'block');
+      $('#header.header-fixed').addClass('sticky');
+
     } else {
-      $('#header.header-fixed  #secundary-menu').css('display', 'none');
+      $('#header.header-fixed').removeClass('sticky');
     }
   }
 
