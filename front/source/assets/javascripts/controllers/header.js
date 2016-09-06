@@ -639,6 +639,202 @@
         ]
       },
       {
+        label: 'Belleza',
+        children: [
+          {
+            label: 'MARCAS EXCLUSIVAS',
+            children: [
+              {
+                label: 'Natura Bissé',
+                children: []
+              },
+              {
+                label: 'Giorgio Armani Cosmetics',
+                children: []
+              },
+              {
+                label: 'Viktor & Rolf',
+                children: []
+              },
+              {
+                label: 'Prada',
+                children: []
+              },
+              {
+                label: 'Armani Privé',
+                children: []
+              },
+              {
+                label: 'Elie Saab',
+                children: []
+              },
+              {
+                label: 'Burberry Beauty',
+                children: []
+              },
+              {
+                label: 'Kiehl´s',
+                children: []
+              },
+              {
+                label: 'Michael Kors Beauty',
+                children: []
+              },
+              {
+                label: 'Miu Miu',
+                children: []
+              },
+              {
+                label: 'Shiseido',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'FRAGANCIAS',
+            children: [
+              {
+                label: 'Ellas',
+                children: []
+              },
+              {
+                label: 'Ellos',
+                children: []
+              },
+              {
+                label: 'Infantiles',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'SETS',
+            children: [
+              {
+                label: 'Ellas',
+                children: []
+              },
+              {
+                label: 'Ellos',
+                children: []
+              },
+              {
+                label: 'Infantiles',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'Maquillaje',
+            children: [
+              {
+                label: 'Rostro',
+                children: []
+              },
+              {
+                label: 'Ojos',
+                children: []
+              },
+              {
+                label: 'Labios',
+                children: []
+              },
+              {
+                label: 'Uñas',
+                children: []
+              },
+              {
+                label: 'Accesorios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'TRATAMIENTO',
+            children: [
+              {
+                label: 'Rostro',
+                children: []
+              },
+              {
+                label: 'Ojos',
+                children: []
+              },
+              {
+                label: 'Labios',
+                children: []
+              },
+              {
+                label: 'Manos',
+                children: []
+              },
+              {
+                label: 'Cuerpo',
+                children: []
+              },
+              {
+                label: 'Solares',
+                children: []
+              },
+              {
+                label: 'Capilares',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'BIENESTAR',
+            children: [
+              {
+                label: 'Secadoras',
+                children: []
+              },
+              {
+                label: 'Planchas y modeladoras',
+                children: []
+              },
+              {
+                label: 'Depiladoras',
+                children: []
+              },
+              {
+                label: 'Rasuradoras y cortadoras',
+                children: []
+              },
+              {
+                label: 'Varios',
+                children: []
+              }
+            ]
+          },
+          {
+            label: 'BATH & BODY',
+            children: [
+              {
+                label: 'Crabtree & Evelyn',
+                children: []
+              },
+              {
+                label: 'Jo Malone',
+                children: []
+              },
+              {
+                label: 'Kiehl´s',
+                children: []
+              },
+              {
+                label: 'L´Occitane',
+                children: []
+              },
+              {
+                label: 'Varios',
+                children: []
+              }
+            ]
+          }
+        ]
+      },
+      {
         label: 'Deportes',
         children: [
           {
