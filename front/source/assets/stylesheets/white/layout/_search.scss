@@ -167,7 +167,7 @@
                   left: 0;
                   width: 0%;
                   border-bottom: 2px solid $color-black;
-                  transition: 0.4s;
+                  @include transition(0.4s);
                 }
               }
             }

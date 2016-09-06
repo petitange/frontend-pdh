@@ -6,6 +6,7 @@
 }
 #cart-container {
   cursor: pointer;
+  float: right;
   &:hover {
     & > .flip-container {
       & > .flipper {

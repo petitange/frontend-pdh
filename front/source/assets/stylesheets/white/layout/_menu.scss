@@ -325,16 +325,6 @@
       @include bp-medium {
         height: 50px;
         &:nth-child(1){
-          background-color: $background-color-white;
-          a {
-            background: none;
-            span {
-              color: $color-black;
-              &:after {
-                width: 50%;
-              }
-            }
-          }
           .grid-container5 {
             left: 100%;
             @include opacity(1);
@@ -486,7 +476,7 @@
     display: table;
     padding: 0px;
     position: relative;
-    z-index: 999;
+    z-index: 499;
   }
   #mp-pusher {
     @include bp-medium {

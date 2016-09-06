@@ -47,7 +47,6 @@ function closeSearch() {
 function openSearch() {
   var widthScreen = getWidthScreen();
   if(widthScreen > mobileBreakPoint) {
-    nav.removeClass('header-fixed');
     $('body').css('overflow', 'hidden');
   }
   scrolled = false;
