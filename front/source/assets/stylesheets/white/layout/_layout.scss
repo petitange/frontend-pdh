@@ -16,7 +16,7 @@ body {
   .overlay-search {
   	@include generate-overlay();
   	@include opacity(.95);
-    @include transition(2s);
+    @include transition(1s);
     @include bp-small {
       top:50px;
       z-index: 2;
