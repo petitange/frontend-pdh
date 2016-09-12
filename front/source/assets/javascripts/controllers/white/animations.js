@@ -14,7 +14,6 @@ $(document).ready(function () {
 });
 
 $(window).load(function () {
-  $('.overlay-search').fadeOut('slow');
   setTimeout(function() {
     $('.load').fadeOut('slow', function () {
       $('#header').removeClass('animated-element');

@@ -36,7 +36,7 @@ $('#search .close-search').click(function () {
 
 function closeSearch() {
   $('body').css('overflow', 'auto');
-  $('body .overlay-search').css('display', 'none');
+  $('.overlay-search').remove();
   $('#toolbar-search #search.search-overlay').removeAttr('style');
   $('#search').removeClass('search-overlay');
   $('#search .content-suggestions').css('display', 'none');
@@ -51,7 +51,7 @@ function openSearch() {
   }
   scrolled = false;
   $('#search').addClass('search-overlay');
-  $('body .overlay-search').show();
+  $('body').append('<div class="overlay-search"></div>');
   $('#search .close-search').css('display', 'block');
   $('#search input').focus();
 }
