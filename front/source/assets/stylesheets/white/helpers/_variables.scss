@@ -1,10 +1,14 @@
 //fonts
-$font-gotham-book: 'Gotham-Book';
-$font-gotham-book-path: 'fonts/Gotham-Book';
-$font-gotham-medium: 'Gotham-Medium';
-$font-gotham-medium-path: 'fonts/Gotham-Medium';
-$font-gotham-bold: 'Gotham-Bold';
-$font-gotham-bold-path: 'fonts/Gotham-Bold';
+$gotham-book: 'Gotham-Book';
+$gotham-book-path: 'fonts/Gotham-Book';
+$gotham-medium: 'Gotham-Medium';
+$gotham-medium-path: 'fonts/Gotham-Medium';
+$gotham-bold: 'Gotham-Bold';
+$gotham-bold-path: 'fonts/Gotham-Bold';
+$santafeletplain: 'santafeletplain';
+$santafeletplain-path: 'fonts/santafeletplain';
+$ultima_w01_regular: 'ultima_w01_regular';
+$ultima_w01_regular-path: 'fonts/ultima_w01_regular';
 $font-icomoon: 'icomoon';
 $font-icomoon-path: 'fonts/icomoon';
 $font-secondary: Arial, Helvetica, sans-serif;
@@ -25,6 +29,7 @@ $color-grey:                         #999999;
 $color-green:                        #68B211;
 $color-ligth-grey:                   #f0f0f0;
 $color-white:                        #ffffff;
+$color-yellow:                       #f39132;
 
 //loader
 $size : 120px;
@@ -60,7 +65,7 @@ $default-box-shadow-y-axis:           1px;
 $default-box-shadow-blur:             2px;
 $default-box-shadow-color:            rgba( 0, 0, 0, 0.2 );
 $default-box-shadow-inset:            '';
-$flexslider-margin:                   -17px 0 60px -40px;
+$flexslider-margin:                   -16px 0 60px -40px;
 $flexslider-bg:                       #fff;
 $flexslider-border:                   4px solid #fff;
 $flexslider-border-radius:            4px;

@@ -111,7 +111,7 @@
       height: 35px;
       color: $color-black;
       font-size: 12px;
-      font-family: $font-gotham-book, $font-secondary;
+      font-family: $gotham-book, $font-secondary;
       font-style: italic;
       outline: none;
       background: none;
@@ -134,7 +134,7 @@
       }
       h2 {
         font-size: 12px;
-        font-family: $font-gotham-medium;
+        font-family: gotham-medium;
         color: $color-black;
         span {
           margin-left: 40px;
@@ -155,7 +155,7 @@
             a {
               text-decoration: none;
               font-size: 12px;
-              font-family: $font-gotham-medium;
+              font-family: gotham-medium;
               color: $color-dark-grey;
               padding-top: 18px;
               display: block;

@@ -152,6 +152,33 @@
   }
 }
 
+@mixin over-url($color) {
+  position: relative;
+  padding-bottom: 5px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid $color;
+    transition: 0.4s;
+  }
+  &:hover {
+    background: none;
+    color: $color;
+    &:after {
+      width: 50%;
+    }
+  }
+  &.current {
+    background: none;
+    color: $color;
+    &:after {
+      width: 50%;
+    }
+  }
+}
 @mixin overIconButton($background-color) {
   width: 40px;
   height: 40px;
@@ -272,6 +299,70 @@
   transform-origin: $prop;
 }
 
+/* buttons */
+@mixin overButton {
+  font-family: $gotham-bold;
+  font-weight: 500;
+  text-transform: uppercase !important;
+  display:block;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration:none;
+  @content;
+  position: relative;
+  overflow: hidden !important;
+  z-index: 10;
+  padding: 10px 0;
+  @include transition(all .8s ease-in-out);
+  span {
+    padding: 0px 10px;
+  }
+  &:hover{
+    color: $color-white !important;
+    &:before {
+      @include opacity(1);
+      width: 120%;
+      background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+    }
+    &:after {
+      @include opacity(1);
+      width: 120%;
+    }
+  }
+  &:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    @content;
+    position: absolute;
+    left: -10%;
+    @include opacity(1);
+    top: 0;
+    z-index: -12;
+    background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+    box-shadow:2px 0px 14px transparent;
+    @include transform(skewX(-20deg));
+    @include transition(all .8s cubic-bezier(0.77, 0, 0.175, 1));
+   }
+   &:after {
+     content: '';
+     width: 0%;
+     height: 100%;
+     display: block;
+     position: absolute;
+     left: -10%;
+     @include opacity(0);
+     top: 0;
+     z-index: -15;
+     box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+     @include transform(skewX(-25deg));
+     @include transition(all .8s cubic-bezier(.2,.95,.57,.99));
+  }
+}
+
 /* Screen resolutions */
 @mixin bp-large {
   @media only screen and (max-width: 1240px) {
@@ -304,6 +395,12 @@
 
 @mixin bp-ipad-portrait {
   @media screen and (min-width: 768px) and (max-width: 890px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     @content;
   }
 }

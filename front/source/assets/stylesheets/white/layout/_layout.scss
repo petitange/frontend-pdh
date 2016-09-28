@@ -1,7 +1,9 @@
 @include font-face($font-icomoon, $font-icomoon-path);
-@include font-face($font-gotham-medium, $font-gotham-medium-path);
-@include font-face($font-gotham-book, $font-gotham-book-path);
-@include font-face($font-gotham-bold, $font-gotham-bold-path);
+@include font-face($gotham-medium, $gotham-medium-path);
+@include font-face($gotham-book, $gotham-book-path);
+@include font-face($gotham-bold, $gotham-bold-path);
+@include font-face($santafeletplain, $santafeletplain-path);
+@include font-face($ultima_w01_regular, $ultima_w01_regular-path);
 @include icon-list($icons);
 
 body {

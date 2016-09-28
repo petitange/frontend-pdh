@@ -42,7 +42,7 @@
           font-size: 10px;
           text-decoration: none;
           color: $color-black;
-          font-family: $font-gotham-book, $font-secondary;
+          font-family: $gotham-book, $font-secondary;
           margin-right: 25px;
         }
         @include bp-small {
@@ -82,7 +82,7 @@
   a {
     @include bp-medium {
       font-size: 10px;
-      font-family: $font-gotham-book, $font-secondary;
+      font-family: $gotham-book, $font-secondary;
       padding-top: 6px;
       display: block;
       text-decoration: none;
@@ -96,7 +96,7 @@
     }
     &:hover {
       @include bp-small {
-        font-family: $font-gotham-book, $font-secondary;
+        font-family: $gotham-book, $font-secondary;
         text-decoration: none;
       }
     }

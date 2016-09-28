@@ -57,7 +57,7 @@
       width: 50px;
       position: absolute;
       font-size: 12px;
-      font-family: $font-gotham-medium;
+      font-family: gotham-medium;
       background: url('../img/bag.svg') no-repeat 0px 0px;
       background-size: 50px 40px;
       @include bp-small {
@@ -102,7 +102,7 @@
       &:first-child{
         color: $color-black;
         height: 50px;
-        font-family: $font-gotham-medium, $font-secondary;
+        font-family: gotham-medium, $font-secondary;
       }
     }
     .back {
@@ -112,7 +112,7 @@
       letter-spacing: -0.5px;
       padding: 20px 30px;
       background-color: $background-color-golden-yellow;
-      font-family: $font-gotham-medium, $font-secondary;
+      font-family: gotham-medium, $font-secondary;
       @include bp-large {
         font-size: 12px;
         padding: 20px 30px;

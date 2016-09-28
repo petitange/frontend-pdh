@@ -50,7 +50,7 @@
             margin-bottom: 10px;
           }
           a {
-        		font-family: $font-gotham-medium, $font-secondary;
+        		font-family: gotham-medium, $font-secondary;
         		padding: 5px 0;
         		font-size: 11px;
         	  font-weight: 500;
@@ -65,7 +65,7 @@
           		padding: 0px;
               height: 20px;
               a {
-            		font-family: $font-gotham-book, $font-secondary;
+            		font-family: $gotham-book, $font-secondary;
             	  font-size: 12px;
             	  font-weight: 500;
             	  letter-spacing: -0.1px;
@@ -88,11 +88,11 @@
       	}
         p {
           color: $color-grey;
-          font-family: $font-gotham-book, $font-secondary;
+          font-family: $gotham-book, $font-secondary;
         }
         .link-catalog {
           span {
-            font-family: $font-gotham-bold, $font-secondary;
+            font-family: $gotham-bold, $font-secondary;
             color: $color-golden-yellow;
           }
         }
@@ -163,7 +163,7 @@
     @include bp-small {
       display: inherit;
       float: inherit;
-      font-family: $font-gotham-book, $font-secondary;
+      font-family: $gotham-book, $font-secondary;
       width: 100%;
       padding: 0px 0px 0px 10px;
     }
@@ -194,7 +194,7 @@
         @include bp-small {
           cursor: pointer;
           float: left;
-          font-family: $font-gotham-book, $font-secondary;
+          font-family: $gotham-book, $font-secondary;
           font-size: 14px !important;
           margin: -20px 0px 0px 80px;
         }
@@ -217,7 +217,7 @@
     &:hover {
       a {
         span {
-          font-family: $font-gotham-book;
+          font-family: $gotham-book;
         }
       }
       & > div {
@@ -376,7 +376,7 @@
         background-color: $background-color-white;
       }
       a {
-      	font-family: $font-gotham-book, $font-secondary;
+      	font-family: $gotham-book, $font-secondary;
       	font-weight: normal;
       	line-height: 1.3em;
       	padding: 18px 0;
@@ -422,7 +422,7 @@
 
 .mcp-icon {
   display: inline-block;
-	font-family: $font-gotham-book, $font-secondary;
+	font-family: $gotham-book, $font-secondary;
   font-size: 13px;
   font-style: normal;
   font-weight: normal;
@@ -452,7 +452,7 @@
     @include bp-small {
       margin: 14px 5px;
       float: left;
-      font-family: $font-gotham-medium, $font-secondary;
+      font-family: gotham-medium, $font-secondary;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.6px;
@@ -538,7 +538,7 @@
               @include bp-small {
                 width: 98%;
                 height: 45px;
-                font-family: $font-gotham-book, $font-secondary;
+                font-family: $gotham-book, $font-secondary;
                 font-size: 11px;
                 letter-spacing: 1px;
                 float: right;
@@ -664,7 +664,7 @@
     float: left;
     margin-top: 20px;
     font-size: 9px;
-    font-family: $font-gotham-bold, $font-secondary;
+    font-family: $gotham-bold, $font-secondary;
   }
   &:hover {
     @include bp-small {
