@@ -1,0 +1,41 @@
+@include font-face($font-icomoon, $font-path);
+@include font-face($gotham-medium, $font-path);
+@include font-face($gotham-book, $font-path);
+@include font-face($gotham-bold, $font-path);
+@include icon-list($icons);
+
+[class^="icon-"] {
+  @include font-icon($font-icomoon);
+}
+
+[class*=" icon-"] {
+  @extend [class^="icon-"];
+}
+
+.font-gotham-light {
+  font-family: $gotham-light;
+}
+.font-gotham-lightItalic {
+  font-family: $gotham-lightit;
+}
+.font-gotham-book {
+  font-family: $gotham-book;
+}
+.font-gotham-bookItalic {
+  font-family: $gotham-bookit;
+}
+.font-gotham-medium {
+  font-family: $gotham-medium;
+}
+.font-gotham-mediumItalic {
+  font-family: $gotham-mediumit;
+}
+.font-gotham-bold {
+  font-family: $gotham-bold;
+}
+.font-gotham-boldItalic {
+  font-family: $gotham-boldit;
+}
+.font-gotham-black {
+  font-family: $gotham-black;
+}

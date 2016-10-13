@@ -93,6 +93,12 @@
   float: left;
 }
 
+@mixin translate3d($positionX, $positionY, $positionZ) {
+  -webkit-transform: translate3d($positionX, $positionY, $positionZ);
+  -moz-transform: translate3d($positionX, $positionY, $positionZ);
+  transform: translate3d($positionX, $positionY, $positionZ);
+}
+
 @mixin generate-margin-top-menu($menu-elements, $margin-top-menu) {
   $sum: 50px;
   @for $i from 1 through $menu-elements {
@@ -240,23 +246,6 @@
   left: 0;
 }
 
-@mixin animate-menu-translation($init, $end) {
-  -o-transform-origin: $init $init;
-	-ms-transform-origin: $init $init;
-	-moz-transform-origin: $init $init;
-	-webkit-transform-origin: $init $init;
-	-o-transition: -o-transform $end, opacity $end;
-	-ms-transition: -ms-transform $end, opacity $end;
-	-moz-transition: -moz-transform $end, opacity $end;
-	-webkit-transition: -webkit-transform $end, opacity $end;
-}
-
-@mixin translate3d($positionX, $positionY, $positionZ) {
-  -webkit-transform: translate3d($positionX, $positionY, $positionZ);
-  -moz-transform: translate3d($positionX, $positionY, $positionZ);
-  transform: translate3d($positionX, $positionY, $positionZ);
-}
-
 @mixin translate($positionX, $positionY) {
   -webkit-transform: translate($positionX, $positionY);
   -moz-transform: translate($positionX, $positionY);
@@ -314,7 +303,7 @@
   position: relative;
   overflow: hidden !important;
   z-index: 10;
-  padding: 10px 0;
+  padding: 10px;
   @include transition(all .8s ease-in-out);
   span {
     padding: 0px 10px;
@@ -338,11 +327,10 @@
     display: block;
     @content;
     position: absolute;
-    left: -10%;
+    left: -12%;
     @include opacity(1);
-    top: 0;
+    top: -2px;
     z-index: -12;
-    background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
     box-shadow:2px 0px 14px transparent;
     @include transform(skewX(-20deg));
     @include transition(all .8s cubic-bezier(0.77, 0, 0.175, 1));
@@ -360,53 +348,5 @@
      box-shadow: 2px 0px 14px rgba(0,0,0,.6);
      @include transform(skewX(-25deg));
      @include transition(all .8s cubic-bezier(.2,.95,.57,.99));
-  }
-}
-
-/* Screen resolutions */
-@mixin bp-large {
-  @media only screen and (max-width: 1240px) {
-    @content;
-  }
-}
-
-@mixin bp-medium {
-  @media only screen and (min-width: 1025px) {
-    @content;
-  }
-}
-@mixin bp-medium-screens {
-  @media only screen and (min-width: 1025px) and (max-width: 1240px) {
-    @content;
-  }
-}
-
-@mixin bp-small {
-  @media only screen and (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin bp-iphone-portrait {
-  @media only screen and (min-width: 320px)  and (max-width: 480px) {
-    @content;
-  }
-}
-
-@mixin bp-ipad-portrait {
-  @media screen and (min-width: 768px) and (max-width: 890px) {
-    @content;
-  }
-}
-
-@mixin bp-tablet {
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin bp-mobile {
-  @media only screen and (max-width: 767px) {
-    @content;
   }
 }

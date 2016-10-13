@@ -1,0 +1,82 @@
+
+
+.container-404 {
+  background: url('../img/bg_404.jpg') no-repeat;
+  background-size: 100% auto;
+  @include bp-small {
+    background-size: cover;
+    background-position: center;
+  }
+  .content-404 {
+    max-width: 1200px;
+    text-align:center;
+    margin:0 auto;
+    min-height: 728px;
+    div {
+      width:50%;
+      margin:0 auto;
+      padding-top:100px;
+      @include bp-small {
+        width: 95%;
+      }
+    }
+    h2 {
+      font-family: 'Gotham-Book';
+      font-size: 32px;
+      line-height: 1.27;
+      text-align: center;
+      color: #656565;
+      margin-bottom: 51px;
+    }
+    h4 {
+      font-family: 'Gotham-medium';
+      font-size: 13px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: 2.9px;
+      text-align: center;
+      color: #252525;
+      margin-bottom: 27px;
+    }
+    .bag {
+      margin: 0 auto;
+      width: 36%;
+      padding-left: 50px;
+      &:hover {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+    }
+    #backhome {
+      background-color: #252525;
+      padding: 20px;
+      font-family: 'Gotham-Bold';
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

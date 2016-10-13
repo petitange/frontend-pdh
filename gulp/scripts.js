@@ -70,3 +70,11 @@ gulp.task('scripts-white', function() {
   //.pipe(plugins.rev.manifest('js-rev-manifest.json'))
   .pipe(gulp.dest(config.path.build + 'js'));
 });
+
+gulp.task('scripts-components', function() {
+  return gulp.src(scripts.template)
+  .pipe(plugins.concat('scripts.js'))
+  .pipe(plugins.uglify())
+  .pipe(plugins.rename({ extname: '.min.js' }))
+  .pipe(gulp.dest(config.path.build + 'js'));
+});

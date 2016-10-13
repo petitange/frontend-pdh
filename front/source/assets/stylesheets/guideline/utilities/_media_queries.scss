@@ -1,0 +1,30 @@
+/* Screen resolutions */
+@mixin bp-large {
+  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin bp-medium-screens {
+  @media only screen and (min-width: 1025px) and (max-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin bp-ipad-portrait {
+  @media screen and (min-width: 768px) and (max-width: 890px) {
+    @content;
+  }
+}

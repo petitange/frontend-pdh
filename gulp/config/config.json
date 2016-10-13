@@ -12,7 +12,8 @@
     "html":    "./front/source/templates/*.html",
     "php":    "./front/source/templates/*.php",
     "tmpl":    "./front/source/templates/**/*.html",
-    "build":   "./front/build/"
+    "build":   "./front/build/",
+    "guideline":  "./front/source/assets/stylesheets/guideline/application.scss"
   },
   "alt-require": true
 }

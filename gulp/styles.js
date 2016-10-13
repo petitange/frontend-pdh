@@ -76,3 +76,29 @@ gulp.task('stylesheets', ['sass-black', 'sass-white', 'fonts'], function() {
     .pipe(plugins.rename('styles.css'))
     .pipe(gulp.dest(config.path.build + 'css'));
 });
+
+gulp.task('appStyles', function() {
+  return gulp.src(["./front/source/assets/stylesheets/guideline/appStyles.css"])
+    .pipe(plugins.rename('appStyles.min.css'))
+    .pipe(gulp.dest(config.path.build + 'css'));
+});
+
+gulp.task('components',['appStyles'], function() {
+  return gulp.src(config.path.guideline)
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(plugins.rename('guideline.css'))
+  //  .pipe(plugins.rev())
+    .pipe(plugins.combineMq({beautify: false}))
+    .pipe(gulp.dest(config.path.build + 'css'))
+    .pipe(plugins.cssnano())
+    .pipe(plugins.sourcemaps.write('.'))
+    .pipe(plugins.rename({ extname: '.min.css' }))
+  //  .pipe(gulp.dest(config.path.build + 'css'))
+  //  .pipe(plugins.rev.manifest('css-rev-manifest.json'))
+    .pipe(gulp.dest(config.path.build + 'css'));
+});

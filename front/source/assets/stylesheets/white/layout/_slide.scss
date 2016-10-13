@@ -1,6 +1,9 @@
 .flexslider {
   position: relative;
   margin: $flexslider-margin;
+  @include bp-small {
+    margin: 35px 0px 60px -60px;
+  };
   zoom: 1;
 
   .slides {
@@ -13,6 +16,10 @@
     li {
       .content-slider-jumbotron {
         background-size: 100% auto !important;
+        @include bp-mobile {
+          background-size: auto !important;
+          background-position: center center !important;
+        }
         .slider-jumbotron {
           max-width: 800px;
           width: 60%;
@@ -111,7 +118,6 @@
             .content-jumbotron {
               .details {
                 div {
-
                   span {
                     font-size: 12px;
                     &.copy-main {
@@ -124,9 +130,8 @@
           }
         }
       }
-      @include bp-small {
+      @include bp-mobile {
         .content-slider-jumbotron {
-          background-size: 100% auto !important;
           .slider-jumbotron {
             max-width: 800px;
             width: 80%;
@@ -134,20 +139,8 @@
             display: table;
             height: 450px;
             position: relative;
-            a {
-              text-decoration: none;
-              color: $color-white;
-              @include over-url($color-white);
-            }
             .content-jumbotron {
-              display: table-cell;
-              vertical-align: middle;
-              height: auto;
-              text-align: center;
-              color: $color-white;
-              font-family: $gotham-medium;
               .logo {
-                margin-top: 0px;
                 img {
                   width: 100%;
                   max-width: 850px;
@@ -155,66 +148,25 @@
                 }
               }
               .title {
-                text-align: center;
-                text-transform: uppercase;
-                color: $color-golden-yellow;
-                font-family: $gotham-medium;
                 font-size: 12px;
                 margin: 0 0 35px 0;
-                line-height: 12px;
-                text-indent: 0;
-                letter-spacing: 4.6px;
-              }
-              .content-buttons {
-                margin: 0 auto;
-                max-width: 550px;
-                display: inline-table;
               }
               .details {
-                height: auto;
-                width: 100%;
-                margin: 0 auto;
-                padding-bottom: 20px;
-                display: table;
                 div {
-                  display: table-cell;
-                  float: none !important;
-                  vertical-align: middle;
-                  &:last-child {
-                     .copy-main {
-                       &:after {
-                        content: '';
-                        }
-                     }
-                  }
                   span {
-                    float: left;
-                    width: 100%;
-                    color: $color-white;
-                    position: relative;
-                    text-align: center;
-                    padding: 2px 0px;
                     font-size: 8px;
-                    font-family: $ultima_w01_regular;
                     &.copy-main {
                       font-size: 16px;
-                      font-family: $santafeletplain;
-                      color: $color-golden-yellow;
+
                       &:after {
-                      content: '+';
-                      position: absolute;
+
                       font-size: 20px;
-                      font-family: $ultima_w01_regular;
-                      top: -5px;
-                      right: 0px;
-                      color: $color-white;
                       }
                     }
                   }
                 }
               }
               .legals {
-                position: relative;
                 font-size: 10px;
               }
             }

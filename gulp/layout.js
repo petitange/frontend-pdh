@@ -24,8 +24,12 @@ gulp.task('layouts', function () {
   return gulp.src([config.path.html])
     .pipe(gulp.dest(config.path.build));
 });
+gulp.task('views', function () {
+  return gulp.src(["./front/source/assets/javascripts/js/views/**/*.html"])
+    .pipe(gulp.dest(config.path.build + '/views'));
+});
 
-gulp.task('layouts-php', function () {
-  return gulp.src([config.path.php])
-    .pipe(gulp.dest(config.path.build));
+gulp.task('data', function () {
+  return gulp.src(["./front/data/**/*.json"])
+    .pipe(gulp.dest(config.path.build + '/data'));
 });

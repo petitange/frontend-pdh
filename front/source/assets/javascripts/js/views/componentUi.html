@@ -1,0 +1,9 @@
+<h1>{{component.name}}</h1>
+<hr/>
+<h4>{{component.text}}</h4>
+<div id="example">
+  <div class="content-example" ng-bind-html="component.html.join('') | trusted" ng-bind-html-unsafe="component.html.join('') | trusted">
+  </div>
+</div>
+<button ng-show="component.hasCode" class="copy-button" ngclipboard data-clipboard-target="#{{component.slug}}">Copy</button>
+<div ng-show="component.hasCode" class="content-code" id="{{component.slug}}" hljs hljs-source="component.html.join('\n')"></div>

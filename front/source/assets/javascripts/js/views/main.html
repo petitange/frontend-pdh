@@ -1,0 +1,10 @@
+<div class="gr-9">
+  <section ng-repeat="elements in vm.components" id="{{elements.category}}-{{$index}}">
+    <div ng-repeat="element in elements.children" id="{{element.slug}}-{{$index}}">
+      <component-ui component="element"></component-ui>
+    </div>
+  </section>
+</div>
+<div class="gr-3">
+  <side-nav components="vm.components"></side-nav>
+</div>

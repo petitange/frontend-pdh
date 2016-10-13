@@ -1,0 +1,116 @@
+.content-code {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+}
+
+.copy-button {
+  float: right;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #767676;
+  cursor: pointer;
+  background-color: #fff;
+  border-top: none;
+  border-left: 1px solid #e1e1e8;
+  border-right: 1px solid #e1e1e8;
+  border-bottom: 1px solid #e1e1e8;
+  border-radius: 0 0 0 4px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#example{
+  margin-right: 0;
+  margin-left: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: table;
+  width: 100%;
+  &:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+    box-sizing: border-box;
+  }
+  .content-example {
+    padding: 35px 0px 25px 10px;
+    div {
+      padding-bottom: 10px;
+    }
+    .colors {
+      width: 100%;
+      div {
+        color: $color-black;
+        margin: 14px;
+        border: 1px solid #000;
+        font-size: 12px;
+        text-align: center;
+        span {
+          &:nth-child(1) {
+            height: 50px;
+            margin-bottom: 8px;
+          }
+          width: 100%;
+          display: block;
+          font-weight: bold;
+          em {
+            font-size: 10px;
+          }
+        }
+        i {
+          font-size: 50px;
+          padding: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+.docs-header {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 24px;
+  text-align: left;
+  background-image: linear-gradient(0deg,#ffe44c,#ffc61e);
+  color: #fff;
+}
+
+#sideNav {
+  position: fixed;
+  ul {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        color: #000;
+        &.active{
+          text-decoration: none;
+          color: #FF3F0B;
+        }
+      }
+    }
+  }
+}

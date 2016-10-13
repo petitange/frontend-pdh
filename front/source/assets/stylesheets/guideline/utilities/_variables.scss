@@ -1,0 +1,113 @@
+//fonts
+$gotham-light:    'Gotham-Light', 'Trebuchet MS', Arial, sans-serif;
+$gotham-lightit:  'Gotham-LightItalic', 'Trebuchet MS', Arial, sans-serif;
+$gotham-book:     'Gotham-Book', 'Trebuchet MS', Arial, sans-serif;
+$gotham-bookit:   'Gotham-BookItalic', 'Trebuchet MS', Arial, sans-serif;
+$gotham-medium:   'Gotham-Medium', 'Trebuchet MS', Arial, sans-serif;
+$gotham-mediumit: 'Gotham-MediumItalic', 'Trebuchet MS', Arial, sans-serif;
+$gotham-bold:     'Gotham-Bold', 'Trebuchet MS', Arial, sans-serif;
+$gotham-boldit:   'Gotham-BoldItalic', 'Trebuchet MS', Arial, sans-serif;
+$gotham-black:    'Gotham-Black', 'Trebuchet MS', Arial, sans-serif;
+$font-icomoon: 'icomoon';
+$font-path: 'fonts/';
+// Map icon names to font unicode characters
+$icons: (
+    calendar: '\e914',
+    bell: '\e913',
+    four: '\e980',
+    pinterest: '\e90d',
+    youtube: '\e912',
+    arrow: '\e900',
+    clock: '\e902',
+    like: '\e906',
+    mail: '\e908',
+    play: '\e90e',
+    mini: '\e90a',
+    alert: '\e911',
+    face: '\e904',
+    instagram: '\e905',
+    twitter: '\e90f',
+    envio-16: '\e910',
+    arrow2: '\e901',
+    close: '\e903',
+    like2: '\e907',
+    marker: '\e909',
+    phone: '\e90c',
+);
+
+//colors
+$color-black:                        #333333;
+$color-blue:                         #3023ae;
+$color-dark-grey:                    #656565;
+$color-golden-yellow:                #ffc61e;
+$color-grey:                         #999999;
+$color-greyish:                      #b9b9b9;
+$color-green:                        #68B211;
+$color-ligth-grey:                   #f0f0f0;
+$color-ligth-purple:                 #5b5fb5;
+$color-ligth-greyish:                #f6f6f6;
+$color-purple:                       #37224b;
+$color-red:                          #ff3f0b;
+$color-white:                        #ffffff;
+$color-white-two:                    #f9f9f9;
+$color-violet:                       #c86dd7;
+$color-yellow:                       #ffe44c;
+
+//loader
+$size : 120px;
+$first-color-loader : $color-golden-yellow;
+$second-color-loader: $color-white;
+
+//animations image
+$maxWidth: 198px;
+$minWidth: 115px;
+
+//images
+$logos: '../img/sprite-logos.svg';
+$img-sad-bag: '../img/sad-bag.svg';
+$img-ring: '../img/ring.svg';
+//backgrounds
+$background-color-black:             $color-black;
+$background-color-grey:              $color-grey;
+$background-color-greyish:           $color-greyish;
+$background-color-ligth-grey:        $color-ligth-grey;
+$background-color-ligth-greyish:     $color-ligth-greyish;
+$background-color-golden-yellow:     $color-golden-yellow;
+$background-color-white:             $color-white;
+$background-color-white-two:         $color-white-two;
+
+//border
+$border-width-1px:                   1px;
+$border-style-solid:                 solid;
+$margin-top-menu:                    -50px;
+$menu-elements:                      12;
+
+//slider
+$default-duration:                    1s;
+$default-easing:                      ease;
+$default-border-radius:               5px;
+$default-box-shadow-x-axis:           0;
+$default-box-shadow-y-axis:           1px;
+$default-box-shadow-blur:             2px;
+$default-box-shadow-color:            rgba( 0, 0, 0, 0.2 );
+$default-box-shadow-inset:            '';
+$flexslider-margin:                   0 auto;
+$flexslider-bg:                       #fff;
+$flexslider-border:                   4px solid #fff;
+$flexslider-border-radius:            4px;
+$flexslider-box-shadow-x-axis:        0;
+$flexslider-box-shadow-y-axis:        1px;
+$flexslider-box-shadow-blur:          4px;
+$flexslider-box-shadow-color:         rgba( 0, 0, 0, 0.2 );
+$flexslider-box-shadow-inset:         '';
+$flex-viewport-max-height:            2000px;
+$flex-viewport-loading-max-height:    300px;
+$flex-control-thumbs:                 5px 0 0;
+$flex-direction-nav-color:            rgba(0,0,0,0.8);
+$flex-direction-nav-text-shadow:      1px 1px 0 rgba( 255, 255, 255, 0.3 );
+$flex-direction-nav-icon-color:       rgba(0,0,0,0.8);
+$flex-direction-nav-icon-text-shadow: 1px 1px 0 rgba( 255, 255, 255, 0.3 );
+$flex-direction-nav-icon-prev:        '\f001';
+$flex-direction-nav-icon-next:        '\f002';
+$flex-pauseplay-icon-play:            '\f003';
+$flex-pauseplay-icon-pause:           '\f004';

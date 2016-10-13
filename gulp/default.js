@@ -6,3 +6,4 @@ gulp.task('default', ['scripts', 'stylesheets', 'layouts', 'image', 'sizereport'
 gulp.task('local', ['scripts', 'layouts', 'image', 'watch', 'sizereport']);
 gulp.task('staging', ['scripts', 'layouts', 'image', 'sizereport', 'build']);
 gulp.task('live', ['scripts', 'layouts', 'image']);
+gulp.task('guideline', ['layouts', 'components', 'scripts-components', 'views']);

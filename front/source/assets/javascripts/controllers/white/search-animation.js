@@ -4,6 +4,10 @@ $('.search-button').click(function () {
   openSearch()
 });
 
+$('#open-search').click(function () {
+  openSearch()
+});
+
 $('#search input').click(function () {
   openSearch();
 });

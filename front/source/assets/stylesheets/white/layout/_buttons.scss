@@ -1,9 +1,7 @@
 .button-black {
   @include overButton {
-    background: transparent;
-    color: $color-yellow;
-    border: 2px solid $color-golden-yellow;
-  }
+  background-color: $color-black;
+}
 }
 
 .button-golden {
@@ -12,7 +10,6 @@
     color: $color-yellow;
     border: 2px solid $color-golden-yellow;
     margin: 0px auto 25px;
-    width: 200px;
   }
   @include bp-small {
 

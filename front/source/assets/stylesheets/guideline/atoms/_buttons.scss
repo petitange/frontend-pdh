@@ -1,0 +1,24 @@
+.button-black {
+  @include overButton {
+    background-color: $color-black;
+    border: 2px solid $color-black;
+    color: $color-white;
+  }
+}
+
+.button-golden {
+  @include overButton {
+    border: 2px solid $color-golden-yellow;
+    background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+  }
+}
+.button-golden-transparent {
+  @include overButton {
+    background: transparent;
+    color: $color-yellow;
+    border: 2px solid $color-golden-yellow;
+    &:before {
+      background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+    }
+  }
+}

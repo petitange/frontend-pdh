@@ -1,0 +1,40 @@
+<div class="mst mcp-wrapper" id="mp-menu-18" >
+  <div class="mcp-pushnew-menu">
+    <div class="mp-pusher" id="mp-pusher">
+      <div id="menu-group-1" class="mp-menu">
+        <h2 class="mb-icon content-close-menu">
+          <span class="close-menu" >cerrar </span><i class="icon-close"></i>
+        </h2>
+        <div class="mp-level">
+          <ul class="menu-creator-pro menu-creator-pro-fade menu-creator-pro-rp-switcher menu-creator-pro-black">
+            <li class="mb-icon mb-icon-arrow-left">
+                <a title="Componentes" href="#" target="_self">
+                    <span>Componentes</span>
+                </a>
+                <div class="grid-container3">
+                  <div class="grid-column grid-column3 mp-level" >
+                    <ul class="level1">
+                      <li ng-repeat="element in vm.components" class="autosub-item level1-{{$index + 1}}">
+                          <a href="#{{element.category}}-{{$index}}" du-smooth-scroll du-scrollspy offset="30" target="_self">
+                            <span>{{element.category}}</span>
+                          </a>
+                          <div ng-if="element.children.length > 0" class="grid-container5">
+                            <div class="content-sub-menu">
+                              <div ng-repeat="component in element.children"  class="sub-menu">
+                                <a  class="nav-header" href="#{{component.slug}}-{{$index}}" du-smooth-scroll du-scrollspy offset="30" target="_self">
+                                  <span>{{component.name}}</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
