@@ -7,10 +7,15 @@
 @import "utilities/typography";
 // UI
 
-//Atoms
+//Atomos
 @import "atoms/buttons.scss"; // general styling using DOM element selectors
-//@import "molecules/**/*.sass";
+@import "atoms/animations.scss";
+
+//Moleculas
+@import "molecules/jumbotron.scss";
+
 @import "organisms/nav.scss";
+@import "organisms/header.scss";
 @import "templates/_layout.scss";
 
 //Template

@@ -189,6 +189,12 @@
   }
 }
 
+@mixin border-radius($deg) {
+  -webkit-border-radius: $deg;
+  -moz-border-radius: $deg;
+  border-radius: $deg;
+}
+
 @mixin animate-circle() {
   .circle {
     border: 2px solid $color-golden-yellow;
@@ -289,6 +295,14 @@
   -webkit-transform: $prop;
   -ms-transform: $prop;
   transform: $prop;
+}
+
+@mixin transform-style($prop...) {
+  -o-transform-style: $prop;
+  -moz-transform-style: $prop;
+  -webkit-transform-style: $prop;
+  -ms-transform-style: $prop;
+  transform-style: $prop;
 }
 
 @mixin transform-origin($prop...) {

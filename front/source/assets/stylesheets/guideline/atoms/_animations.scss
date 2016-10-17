@@ -1,0 +1,15 @@
+.over-link {
+  @include over-link($color-black);
+}
+
+.animate-div {
+  border: 5px solid $color-black;
+  margin: 10px auto;
+  height: 100px;
+  width: 100px;
+  &:hover {
+    border: 5px solid $color-golden-yellow;
+    @include transform(rotate(-45deg));
+    @include transition(.8s);
+  }
+}

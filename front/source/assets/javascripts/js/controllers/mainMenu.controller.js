@@ -3,13 +3,13 @@
 
     angular
         .module('app')
-        .controller('menuCtrl', [
+        .controller('mainMenuCtrl', [
             'componentService',
             'Notification',
-            menuCtrl
+            mainMenuCtrl
         ]);
 
-    function menuCtrl(componentService, Notification) {
+    function mainMenuCtrl(componentService, Notification) {
         var vm = this;
         componentService.getComponents().then(function (response) {
             vm.components = response.data;

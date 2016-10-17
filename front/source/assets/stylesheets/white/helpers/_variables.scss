@@ -1,35 +1,53 @@
 //fonts
 $gotham-book: 'Gotham-Book';
-$gotham-book-path: 'fonts/Gotham-Book';
+$gotham-book-path: 'fonts/';
 $gotham-medium: 'Gotham-Medium';
-$gotham-medium-path: 'fonts/Gotham-Medium';
+$gotham-medium-path: 'fonts/';
 $gotham-bold: 'Gotham-Bold';
-$gotham-bold-path: 'fonts/Gotham-Bold';
+$gotham-bold-path: 'fonts/';
 $santafeletplain: 'santafeletplain';
-$santafeletplain-path: 'fonts/santafeletplain';
+$santafeletplain-path: 'fonts/';
 $ultima_w01_regular: 'ultima_w01_regular';
-$ultima_w01_regular-path: 'fonts/ultima_w01_regular';
+$ultima_w01_regular-path: 'fonts/';
 $font-icomoon: 'icomoon';
-$font-icomoon-path: 'fonts/icomoon';
+$font-icomoon-path: 'fonts/';
 $font-secondary: Arial, Helvetica, sans-serif;
 
 // Map icon names to font unicode characters
 $icons: (
-    bag: '\69',
-    close: '\6a',
-    left: '\67',
-    search: '\68'
+    calendar: '\e914',
+    bell: '\e913',
+    four: '\e980',
+    pinterest: '\e90d',
+    youtube: '\e912',
+    arrow: '\e900',
+    clock: '\e902',
+    like: '\e906',
+    mail: '\e908',
+    play: '\e90e',
+    mini: '\e90a',
+    alert: '\e911',
+    face: '\e904',
+    instagram: '\e905',
+    twitter: '\e90f',
+    envio-16: '\e910',
+    arrow2: '\e901',
+    close: '\e903',
+    like2: '\e907',
+    marker: '\e909',
+    phone: '\e90c',
 );
 
 //colors
 $color-black:                        #333333;
-$color-dark-grey:                    #666666;
+$color-dark-grey:                    #656565;
 $color-golden-yellow:                #ffc425;
 $color-grey:                         #999999;
 $color-green:                        #68B211;
 $color-ligth-grey:                   #f0f0f0;
 $color-white:                        #ffffff;
 $color-yellow:                       #f39132;
+$color-greyish:                      #b9b9b9;
 
 //loader
 $size : 120px;

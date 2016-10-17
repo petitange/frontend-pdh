@@ -2,6 +2,8 @@
 @include font-face($gotham-medium, $font-path);
 @include font-face($gotham-book, $font-path);
 @include font-face($gotham-bold, $font-path);
+@include font-face($santafeletplain, $font-path);
+@include font-face($ultima_w01_regular, $font-path);
 @include icon-list($icons);
 
 [class^="icon-"] {

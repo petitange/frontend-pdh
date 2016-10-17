@@ -3,11 +3,20 @@
     background-color: $color-black;
     border: 2px solid $color-black;
     color: $color-white;
+    &:hover {
+      color: $color-black;
+      &:before {
+        background-color: $color-white;
+      }
+    }
   }
 }
 
 .button-golden {
   @include overButton {
+    &:hover{
+      color: $color-white;
+    }
     border: 2px solid $color-golden-yellow;
     background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
   }
@@ -17,8 +26,11 @@
     background: transparent;
     color: $color-yellow;
     border: 2px solid $color-golden-yellow;
-    &:before {
-      background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+    &:hover{
+      color: $color-white;
+      &:before {
+        background-image: linear-gradient(to left, $color-yellow, $color-golden-yellow);
+      }
     }
   }
 }

@@ -1,11 +1,12 @@
-
-
 .container-404 {
-  background: url('../img/bg_404.jpg') no-repeat;
-  background-size: 100% auto;
-  @include bp-small {
-    background-size: cover;
-    background-position: center;
+  &.background-404 {
+    background-image: url('../img/bg_404.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    @include bp-small {
+      background-position: center;
+      background-size: auto;
+    }
   }
   .content-404 {
     max-width: 1200px;
@@ -60,7 +61,6 @@
       text-decoration: none;
     }
   }
-
 }
 
 @keyframes shake {

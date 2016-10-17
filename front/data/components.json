@@ -1,6 +1,6 @@
 [
   {
-    "category": "Atoms",
+    "category": "Atomos",
     "summary": "Elementos Simples",
     "children": [
       {
@@ -28,6 +28,19 @@
           "<div class='font-gotham-bold'>'Gotham-Bold', 'Trebuchet MS', Arial, sans-serif;</div>",
           "<div class='font-gotham-boldItalic'>'Gotham-BoldItalic', 'Trebuchet MS', Arial, sans-serif;</div>",
           "<div class='font-gotham-black'>'Gotham-Black', 'Trebuchet MS', Arial, sans-serif;</div>"
+        ],
+        "hasCode": true
+      },
+      {
+        "name": "Animations",
+        "slug": "animations",
+        "text": "Animaciones de Palacio de Hierro",
+        "html": [
+          "<a class='over-link' >Hover en link</a>",
+          "<div class='animate-div'></div>",
+          "<span id='circle-border' class='circle'>",
+          "  <span id='circle-small' class='circle'></span>",
+          "</span>"
         ],
         "hasCode": true
       },
@@ -222,13 +235,96 @@
         "hasCode": true
       },
       {
+        "name": "Inline Elements",
+        "slug": "heading",
+        "text": "Inline Elements de Noches Palacios",
+        "html": [
+          "<div class='text'>",
+          " <p><a href='/'>This is a text link</a></p>",
+          " <p><strong>Strong is used to indicate strong importance</strong></p>",
+	        " <p><em>This text has added emphasis</em></p>",
+          " <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>",
+          " <p>The <i>i element</i> is text that is set off from the normal text</p>",
+          " <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>",
+          " <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>",
+	        " <p><s>This text has a strikethrough</s></p>",
+          " <p>Superscript<sup>®</sup></p>",
+          " <p>Subscript for things like H<sub>2</sub>O</p>",
+          " <p><small>This small text is small for for fine print, etc.</small></p>",
+          " <p>Abbreviation: <abbr title='HyperText Markup Language'>HTML</abbr></p>",
+          " <p>Keybord input: <kbd>Cmd</kbd></p>",
+          " <p><q cite='https://developer.mozilla.org/en-US/docs/HTML/Element/q'>This text is a short inline quotation</q></p>",
+          " <p><cite>This is a citation</cite>",
+          " </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>",
+          " <p>The <mark>mark element</mark> indicates a highlight</p>",
+          " <p><code>This is what inline code looks like.</code></p>",
+          " <p><samp>This is sample output from a computer program</samp></p>",
+          " <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>",
+          "</div>"
+        ],
+        "hasCode": true
+      },
+      {
+        "name": "Paragraph",
+        "slug": "paragraph",
+        "text": "paragraph",
+        "html": [
+          "<p>A paragraph (from the Greek paragraphos, 'to write beside' or 'written beside') is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>"
+        ],
+        "hasCode": true
+      },
+      {
         "name": "Logo Image",
         "slug": "logo-image",
         "text": "Logo Palacio de Hierro",
         "html": [
-          "<img src='img/logo.svg' />",
-          "<button class='button-golden'>button</button>",
-          "<button class='button-golden-transparent'>button</button>"
+          "<img class='logo' src='img/logo.svg'/>"
+        ],
+        "hasCode": true
+      }
+    ]
+  },
+  {
+    "category": "Moleculas",
+    "summary": "Elementos Compuestos",
+    "children": [
+      {
+        "name": "Jumbotron",
+        "slug": "jumbotron",
+        "text": "Agregamos una content-slider-jumbotro para agregar un backgrund de imagen o color.",
+        "html": [
+          "<div class='content-slider-jumbotron'>",
+          "  <div class='slider-jumbotron'>",
+          "    <div class='content-jumbotron'>",
+          "      <img src='img/noches-palacio-rock-n-roll-promo.png' />",
+          "        <div class='gr-12 details'>"
+          "          <div class='gr-3'>"
+          "           <span>&nbsp;</span>"
+          "           <span class='copy-main'>15%</span>"
+          "           <span>en cupones</span>"
+          "          </div>"
+          "          <div class='gr-3'>"
+          "           <span>hasta</span>"
+          "           <span class='copy-main' >24</span>"
+          "           <span>MSI</span>"
+          "          </div>"
+          "          <div class='gr-3'>"
+          "           <span>paga hasta</span>"
+          "           <span class='copy-main'>Febrero</span>"
+          "           <span>de 2017</span>"
+          "          </div>"
+          "          <div class='gr-3'>"
+          "           <span>10% en Monedas Palacio</span>"
+          "           <span class='copy-main'>Obsequios Increíbles</span>"
+          "           <span>sólo con Tarjeta Palacio</span>"
+          "          </div>"
+          "        </div>"
+          "      <span class='gr-12 title'>PREMIAMOS TUS COMPRAS TODAS LAS NOCHES PALACIO.</span>",
+          "      <button class='button-golden'><span>Consultar fechas</span></button>",
+          "      <span class='gr-12 legals'>Septiembre 29 a octubre 31 de 2016. Consulta términos, exceptos y CAT de la promoción <a href=''>aquí</a></span>",
+          "    </div>",
+          "  </div>",
+          "</div>"
         ],
         "hasCode": true
       }

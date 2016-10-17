@@ -31,6 +31,7 @@
     }
   }
   .grid-container5 {
+    background-color: $color-white;
     @include bp-medium {
       width: 1445px;
   	  height: auto;
@@ -153,7 +154,6 @@
     position: relative;
     text-align: left;
     height: 50px;
-    @include over-link($color-black);
     @include bp-medium-screens {
       padding: 0px 10px;
     }
@@ -186,6 +186,7 @@
         position: relative;
         padding-bottom: 5px;
         color: $color-black;
+        @include over-link($color-black);
       }
       &.mp-back {
         @include bp-medium {
@@ -239,7 +240,7 @@
     	opacity: 0;
     	width: 100%;
     	min-height: 50px;
-    	padding: 30px 15%;
+    	padding: 0px 15%;
     //	@include animate-menu-translation(0%, 2s);
       @include bp-small {
         margin-top: 25px;
@@ -316,10 +317,6 @@
     }
   }
   .level1 {
-    padding-top: 10px;
-    @include bp-medium {
-      padding-top: 0px;
-    }
     li {
       height: auto;
       @include bp-medium {
@@ -327,6 +324,7 @@
         &:nth-child(1){
           .grid-container5 {
             left: 100%;
+            background-color: $color-white;
             @include opacity(1);
           }
         }

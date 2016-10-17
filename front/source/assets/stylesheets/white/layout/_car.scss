@@ -15,8 +15,8 @@
         -webkit-transform-style: preserve-3d;
         -webkit-transition: .5s;
         -webkit-transform: perspective(500px) rotateX(90deg) translateY(-25px) translateZ(25px);
-        transform: perspective(500px) rotateX(90deg) translateY(-25px) translateZ(25px);
-        transform-style: preserve-3d;
+    //    transform: perspective(500px) rotateX(90deg) translateY(-25px) translateZ(25px);
+    //    transform-style: preserve-3d;
         transition: .5s;
         .back {
           background-color: $color-golden-yellow;
@@ -72,12 +72,12 @@
   -webkit-transform: perspective(500);
   -webkit-transform-style: preserve-3d;
   -webkit-transition: .5s;
-  transform: perspective(500px);
-  transform-style: preserve-3d;
+  //transform: perspective(500px);
+//  transform-style: preserve-3d;
   transition: .5s;
   &:hover {
     -webkit-transform: perspective(500) rotateX(90deg) translateY(-25px) translateZ(25px);
-    transform: perspective(500px) rotateX(90deg) translateY(-25px) translateZ(25px);
+  //  transform: perspective(500px) rotateX(90deg) translateY(-25px) translateZ(25px);
     .back {
       background-color: $color-golden-yellow;
       color: $color-black;
@@ -87,8 +87,8 @@
     -webkit-transform: rotateX(-90deg);
     -webkit-transform-origin: 100% 0;
     -webkit-transition: .5s;
-    transform: rotateX(-90deg);
-    transform-origin: 100% 0;
+  //  transform: rotateX(-90deg);
+  //  transform-origin: 100% 0;
     transition: .5s;
   }
 }

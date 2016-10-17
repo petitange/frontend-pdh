@@ -2,13 +2,13 @@
     'use strict';
     angular
         .module('app')
-        .directive('menu', menu);
+        .directive('mainMenu', mainMenu);
 
-    function menu() {
+    function mainMenu() {
         var directive = {
             restricts: 'E',
-            templateUrl: 'views/menu.html',
-            controller: 'menuCtrl',
+            templateUrl: 'views/mainMenu.html',
+            controller: 'mainMenuCtrl',
             controllerAs: 'vm'
         };
 
