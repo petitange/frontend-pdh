@@ -8,8 +8,8 @@ $gotham-mediumit: 'Gotham-MediumItalic', 'Trebuchet MS', Arial, sans-serif;
 $gotham-bold:     'Gotham-Bold', 'Trebuchet MS', Arial, sans-serif;
 $gotham-boldit:   'Gotham-BoldItalic', 'Trebuchet MS', Arial, sans-serif;
 $gotham-black:    'Gotham-Black', 'Trebuchet MS', Arial, sans-serif;
-$santafeletplain: 'santafeletplain', 'Trebuchet MS', Arial, sans-serif;
-$ultima_w01_regular: 'ultima_w01_regular, 'Trebuchet MS', Arial, sans-serif';
+$santafeletplain: 'santafeletplain';
+$ultima_w01_regular: 'ultima_w01_regular';
 $font-icomoon: 'icomoon';
 $font-path: 'fonts/';
 // Map icon names to font unicode characters
@@ -34,7 +34,7 @@ $icons: (
     close: '\e903',
     like2: '\e907',
     marker: '\e909',
-    phone: '\e90c',
+    phone: '\e90c'
 );
 
 //colors

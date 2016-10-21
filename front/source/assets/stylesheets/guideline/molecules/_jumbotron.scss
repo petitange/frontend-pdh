@@ -23,6 +23,9 @@
       text-align: center;
       color: $color-white;
       font-family: $gotham-medium;
+      button {
+        margin: 0 auto;
+      }
       .logo {
         margin-top: 0px;
         img {
@@ -91,7 +94,8 @@
         }
       }
       .legals {
-        position: relative;
+        padding-top: 30px;
+        font-size: 12px;
       }
     }
   }

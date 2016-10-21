@@ -53,7 +53,7 @@
     box-sizing: border-box;
   }
   .content-example {
-    padding: 35px 0px 25px 10px;
+    padding: 35px 20px 25px 20px;
     div {
       padding-bottom: 10px;
     }
@@ -87,7 +87,9 @@
   }
 }
 
-
+.backgroundClass {
+  background-color: $background-color-black;
+}
 
 .docs-header {
   padding-top: 1px;

@@ -11,6 +11,7 @@ $(document).ready(function () {
   var widthScreen = getWidthScreen ();
   getSizeMenu(widthScreen);
   groupSubMenu(columnWidth);
+  msieversion();
 });
 
 $(window).load(function () {
@@ -104,4 +105,27 @@ function groupSubMenu(columnWidth) {
     itemSelector: '.sub-menu',
     columnWidth: columnWidth
   });
+}
+
+function msieversion() {
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    {
+      $( "div#cart-container" )
+        .mouseenter(function() {
+          $('.front').hide();
+          $('.back').css('transform', 'rotateX(0deg)');
+          $('.flipper').css('transform', 'initial');
+        })
+        .mouseleave(function() {
+          $('.back').css('transform', 'rotateX(-90deg)');
+          $('.flipper').css('transform', 'initial');
+          $('.front').show();
+        });
+    }
+    
+    return false;
 }
